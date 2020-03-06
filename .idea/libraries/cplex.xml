@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="cplex">
+    <CLASSES />
+    <JAVADOC />
+    <NATIVE>
+      <root url="file://C:/gurobi901/win64/bin" />
+    </NATIVE>
+    <SOURCES />
+  </library>
+</component>
