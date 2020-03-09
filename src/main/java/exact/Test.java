@@ -27,7 +27,8 @@ public class Test {
         List<Customer> customers = instance.getCustomers();
         List<RechargingStation> rechargingStations = instance.getRechargingStations();
 
-        List<Node> V0 = Stream.of(customers, rechargingStations).flatMap(List::stream).collect(Collectors.toList());
+        List<Node> V = Stream.of(customers, rechargingStations).flatMap(List::stream).collect(Collectors.toList());
+        List<Node> V0 = new ArrayList<>(V);
         V0.add(instance.getDepot());
 
         GRBVar[][] vars = new GRBVar[V0.size()][V0.size()];
@@ -42,20 +43,42 @@ public class Test {
         }
 
         GRBLinExpr lhs = new GRBLinExpr();
-        for (int j = 0; j < V0.size(); j++) {
-            for (int i = 0; i < customers.size(); i++) {
+        for (int i = 0; i < customers.size(); i++) {
+            for (int j = 0; j < V0.size(); j++) {
                 if (i == j) continue;
-                lhs.addTerm(1.0, vars[j][i]);
+                lhs.addTerm(1.0, vars[i][j]);
             }
         }
-        model.addConstr(lhs, GRB.EQUAL, 1, "First constraint");
+        model.addConstr(lhs, GRB.EQUAL, 1, "Connectivity of costumers constraint");
 
         lhs = new GRBLinExpr();
-        for (int j = 0; j < V0.size(); j++) {
-            for (int i = 0; i < instance.getRechargingStations().size(); i++) {
-
+        for (int i = customers.size(); i < rechargingStations.size() + customers.size(); i++) {
+            for (int j = 0; j < V0.size(); j++) {
+                if (i == j) continue;
+                lhs.addTerm(1.0, vars[i][j]);
             }
         }
+        model.addConstr(lhs, GRB.LESS_EQUAL, 1, "Connectivity of visits to recharging stations constraint");
+
+        lhs  = new GRBLinExpr();
+        for (int i = 0; i < V.size(); i++) {
+            for (int j = 0; j < V0.size(); j++) {
+                if (i == j) continue;
+                lhs.addTerm(1.0, vars[i][j]);
+            }
+        }
+        for (int i = 0; i < V0.size(); i++) {
+            for (int j = 0; j < V.size(); j++) {
+                lhs.addTerm(-1.0, vars[i][j]);
+            }
+        }
+        model.addConstr(lhs, GRB.EQUAL, 0, "Flow conservation constraint");
+
+        lhs = new GRBLinExpr();
+
+
+        model.addConstr(lhs, GRB.LESS_EQUAL, 0, "Time feasibility for arcs\n" +
+                "leaving customers and the depot");
     }
 
     public static void main(String[] args) {
