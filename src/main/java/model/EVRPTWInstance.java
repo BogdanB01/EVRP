@@ -14,6 +14,7 @@ public class EVRPTWInstance {
     private Map<String, RechargingStation> rechargingStationMap;
     private List<Node> nodes;
     private BEVehicleType vehicleType;
+    private boolean hasDummies;
 
     public EVRPTWInstance(String name, Depot depot, List<RechargingStation> rechargingStations,
                    List<Customer> customers, BEVehicleType vehicleType) {
@@ -37,6 +38,7 @@ public class EVRPTWInstance {
         nodes.addAll(rechargingStations);
         nodes.addAll(customers);
         this.vehicleType = vehicleType;
+        this.hasDummies = false;
     }
 
     public String getName() {
@@ -53,6 +55,37 @@ public class EVRPTWInstance {
 
     public boolean isCustomer(Node n) {
         return n.id > 0 && n.id > rechargingStations.size() && n.id < rechargingStations.size() + customers.size() + 1;
+    }
+
+    public void addDummies() {
+        List<RechargingStation> chargersWithDummies = new ArrayList<>();
+        int numberOfDummies = 4;//customers.size() + rechargingStations.size();
+
+        int id = 1;
+
+        for (RechargingStation charger : rechargingStations) {
+            for (int j = 0; j < numberOfDummies; j++) {
+                RechargingStation rechargingStation = new RechargingStation(charger);
+                rechargingStation.id = id++;
+                chargersWithDummies.add(rechargingStation);
+            }
+        }
+
+        for (Customer customer : customers) {
+            customer.id = id++;
+        }
+
+        Depot endPoint = new Depot(depot);
+        endPoint.id = id;
+
+        this.rechargingStations = chargersWithDummies;
+
+        this.nodes = new ArrayList<>();
+        this.nodes.add(depot);
+        this.nodes.addAll(chargersWithDummies);
+        this.nodes.addAll(customers);
+        this.nodes.add(endPoint);
+        this.hasDummies = true;
     }
 
     private boolean isMandatory(Node n) {
@@ -142,7 +175,7 @@ public class EVRPTWInstance {
     }
 
     private Node.Location getLocation(Node node) {
-        if (node.id == depot.id) {
+        if (node.id == depot.id || (hasDummies && node.id == nodes.size() - 1)) {
             return depot.getLocation();
         } else if (node.id > rechargingStations.size()) {
             return customers.get(node.id - (rechargingStations.size() + 1)).getLocation();
@@ -151,7 +184,7 @@ public class EVRPTWInstance {
     }
 
     public Node.TimeWindow getTimeWindow(Node node) {
-        if (node.id == depot.id) {
+        if (node.id == depot.id || (hasDummies && node.id == nodes.size() - 1)) {
             return depot.getTimeWindow();
         }
         else if (node.id > rechargingStations.size()) {
@@ -168,6 +201,17 @@ public class EVRPTWInstance {
     public double getRechargingRate(Node node) {
         if (!isRechargingStation(node)) return 0;
         return rechargingStations.get(node.id - 1).getRechargingRate();
+    }
+
+    public double getRechargingRate() {
+        if (rechargingStations.size() > 0) {
+            return rechargingStations.get(0).getRechargingRate();
+        }
+        throw new IllegalArgumentException("No recharging station");
+    }
+
+    public Node getById(int id) {
+        return nodes.get(id);
     }
 
     static class VehicleType {

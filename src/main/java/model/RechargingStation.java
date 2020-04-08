@@ -15,6 +15,13 @@ public class RechargingStation extends Node {
         this.rechargingRate = rechargingRate;
     }
 
+    public RechargingStation(RechargingStation rechargingStation) {
+        this.name = rechargingStation.getName();
+        this.location = rechargingStation.getLocation();
+        this.timeWindow = rechargingStation.getTimeWindow();
+        this.rechargingRate = rechargingStation.getRechargingRate();
+    }
+
     public String getName() {
         return name;
     }

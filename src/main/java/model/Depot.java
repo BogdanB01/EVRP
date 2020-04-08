@@ -12,6 +12,12 @@ public class Depot extends Node {
         this.timeWindow = new TimeWindow(start, end);
     }
 
+    public Depot(Depot depot) {
+        this.name = depot.getName();
+        this.location = depot.getLocation();
+        this.timeWindow = depot.getTimeWindow();
+    }
+
     public String getName() {
         return name;
     }

@@ -1,7 +1,6 @@
-import construction.BeasleyHeuristic;
-import construction.GiantRouteConstructionStrategy;
-import construction.KNearestNeighborsMinEndTime;
-import construction.KNearestNeighborsMinReadyTime;
+import exact.EVRPTWModel;
+import exact.GurobiSolver;
+import gurobi.GRBException;
 import guru.nidi.graphviz.attribute.Color;
 import guru.nidi.graphviz.engine.Format;
 import guru.nidi.graphviz.engine.Graphviz;
@@ -22,22 +21,20 @@ import java.util.Map;
 public class Main {
 
     public static void main(String[] args) {
-        File instanceFile = new File("input/c103_21.txt");
+        File instanceFile = new File("input/c101C10.txt");
         EVRPTWInstance instance;
         try {
             instance = new SchneiderLoader().load(instanceFile);
-            GiantRouteConstructionStrategy strategy = new KNearestNeighborsMinReadyTime(instance);
-            BeasleyHeuristic h = new BeasleyHeuristic(instance, strategy);
-            List<Route> routes = h.solve();
-            System.out.println(routes.size());
+
+            EVRPTWModel model = new EVRPTWModel(instance);
+            model.solve();
 
 
-            for (Route route : routes) {
-                System.out.println(route.getNodes() + " " + route.isFeasible());
-            }
         } catch(IOException e) {
             System.err.println("Error: error while parsing the instance file (" + instanceFile.getPath() + ")\n"
                     + "is this an actual E-VRPTW instance file?");
+        } catch (GRBException e) {
+            e.printStackTrace();
         }
     }
 

@@ -95,7 +95,7 @@ public class Route {
         return getPayloadCapacity() > instance.getVehicleCapacity();
     }
 
-    private boolean isTankCapacityViolated() {
+    public boolean isTankCapacityViolated() {
         Node last = null;
         double tankCapacity = instance.getVehicleEnergyCapacity();
         for (Node node : nodes) {

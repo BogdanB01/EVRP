@@ -12,9 +12,6 @@ public class Customer extends Node {
     public static final Comparator<Customer> WINDOW_END_COMPARATOR =
             Comparator.comparing(c -> c.getTimeWindow().getEnd());
 
-    public static final Comparator<Customer> ANGLE_COMPARATOR =
-            Comparator.comparing(Customer::getAngleFromOrigin);
-
     public Customer(int id, String name, double x, double y, double start, double end, double demand,
              double serviceTime) {
         super(id);

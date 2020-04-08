@@ -3,8 +3,9 @@ package model;
 import java.util.Objects;
 
 public class Node {
-    public final int id;
+    public int id;
 
+    Node() {}
     Node(int id) {
         this.id = id;
     }
