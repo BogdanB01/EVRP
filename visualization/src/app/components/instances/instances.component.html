@@ -1,0 +1,36 @@
+<mat-form-field style="margin: 20px;">
+    <mat-label>Select an instance</mat-label>
+    <mat-select [(value)]="selectedInstance" (selectionChange)="getSelectedInstance($event)">
+      <mat-option>None</mat-option>
+      <mat-option *ngFor="let instance of instances" [value]="instance.name">{{ instance.name }}</mat-option>
+    </mat-select>
+</mat-form-field>
+
+<mat-button-toggle-group #group="matButtonToggleGroup" *ngIf="selectedInstance">
+  <mat-button-toggle value="left" aria-label="Text align left" [matMenuTriggerFor]="menu">
+    Greedy solution   <mat-icon>more_vert</mat-icon>
+  </mat-button-toggle>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Nearest Neighbour Min Start Time</button>
+    <button mat-menu-item>Nearest Neighbour Min End Time</button>
+    <button mat-menu-item>KNearest Neighbour Min Start Time</button>
+    <button mat-menu-item>KNearest Neighbour Min End Time</button>
+  </mat-menu>
+  <mat-button-toggle value="center" aria-label="Text align center">
+    Exact solution
+  </mat-button-toggle>
+  <mat-button-toggle value="right" aria-label="Text align right">
+    GA solution
+  </mat-button-toggle>
+</mat-button-toggle-group>
+
+<!-- <div class="example-selected-value">Selected value: {{group.value}}</div> -->
+
+<div class="container" style="display: flex;">
+  <div style="position: absolute; z-index: 2; margin-left: 20px;">
+    <p>Time taken: 524 sec</p>
+    <p>Cost: 2200</p>
+  </div>
+  <div style="flex-grow: 1; z-index: 1;" #instance></div>
+  <app-legend *ngIf=selectedInstance></app-legend>
+</div>

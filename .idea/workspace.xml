@@ -2,20 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78884da2-1acc-4099-a6f6-b5be831ef4e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/exact/GurobiSolver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/Chromosome.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/GeneticAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/greedy/GreedyAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/c101C5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input/c101C5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/exact/Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Depot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Depot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/EVRPTWInstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/EVRPTWInstance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/RechargingStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/RechargingStation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Route.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Route.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/construction/BeasleyHeuristic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/construction/BeasleyHeuristic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/construction/GiantRouteConstructionStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/construction/GiantRouteConstructionStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/construction/KNearestNeighborsMinEndTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/construction/KNearestNeighborsMinEndTime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/construction/KNearestNeighborsMinReadyTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/construction/KNearestNeighborsMinReadyTime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/construction/NearestNeighborMinEndTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/construction/NearestNeighborMinEndTime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/construction/NearestNeighborMinStartTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/construction/NearestNeighborMinStartTime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/construction/ShortestPathSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/construction/ShortestPathSolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exact/EVRPTWModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/exact/EVRPTWModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exact/GurobiModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/exact/GurobiModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exact/GurobiSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/exact/GurobiSolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exception/InfeasibleRouteException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/exception/InfeasibleRouteException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ga/Chromosome.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ga/GeneticAlgorithm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/greedy/GreedyAlgorithm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Depot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/model/Depot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/EVRPTWInstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/model/EVRPTWInstance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/model/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/RechargingStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/model/RechargingStation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Route.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/model/Route.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/RouteHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/verifier/EVRPTWRouteVerifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/verifier/EVRPTWRouteVerifier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/verifier/RoutesLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/verifier/RoutesLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/verifier/SchneiderLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/verifier/SchneiderLoader.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/rest/target/" />
+    <ignored path="$PROJECT_DIR$/solver/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,64 +49,65 @@
     <session id="1622673755">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="36" />
-          <entry key="project.open.time.0" value="6" />
-          <entry key="project.open.time.1" value="6" />
+          <entry key="project.closed" value="43" />
+          <entry key="project.open.time.0" value="9" />
+          <entry key="project.open.time.1" value="8" />
           <entry key="project.open.time.14" value="3" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="1" />
-          <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.17" value="2" />
           <entry key="project.open.time.18" value="3" />
           <entry key="project.open.time.19" value="3" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.20" value="3" />
-          <entry key="project.open.time.21" value="2" />
+          <entry key="project.open.time.21" value="3" />
           <entry key="project.open.time.22" value="2" />
           <entry key="project.open.time.25" value="2" />
           <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.30" value="1" />
+          <entry key="project.open.time.30" value="2" />
           <entry key="project.open.time.31" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="42" />
+          <entry key="project.opened" value="50" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="44" />
-          <entry key="java" value="199" />
-          <entry key="log" value="1" />
+          <entry key="class" value="52" />
+          <entry key="gitignore" value="1" />
+          <entry key="java" value="328" />
+          <entry key="log" value="3" />
           <entry key="png" value="1" />
-          <entry key="txt" value="29" />
-          <entry key="xml" value="6" />
+          <entry key="txt" value="39" />
+          <entry key="xml" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="44" />
+          <entry key="CLASS" value="52" />
           <entry key="Image" value="1" />
-          <entry key="JAVA" value="199" />
-          <entry key="Log" value="1" />
-          <entry key="PLAIN_TEXT" value="29" />
-          <entry key="XML" value="6" />
+          <entry key="JAVA" value="328" />
+          <entry key="Log" value="3" />
+          <entry key="PLAIN_TEXT" value="40" />
+          <entry key="XML" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="18" />
-          <entry key="java" value="97788" />
+          <entry key="dummy" value="61" />
+          <entry key="java" value="120230" />
           <entry key="regexp" value="1" />
-          <entry key="xml" value="31" />
+          <entry key="xml" value="102" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="97788" />
-          <entry key="PLAIN_TEXT" value="18" />
+          <entry key="JAVA" value="120230" />
+          <entry key="PLAIN_TEXT" value="61" />
           <entry key="RegExp" value="1" />
-          <entry key="XML" value="31" />
+          <entry key="XML" value="102" />
         </counts>
       </usages-collector>
     </session>
@@ -91,10 +115,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/exact/GurobiSolver.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/boundry/controller/InstanceController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="246" column="44" selection-start-line="246" selection-start-column="44" selection-end-line="246" selection-end-column="44" />
+            <state relative-caret-position="166">
+              <caret line="30" column="53" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -103,106 +127,72 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+        <entry file="file://$PROJECT_DIR$/input/c101C5.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1586292792633" expanded="true" signature="742:907" ph="{...}" />
-              </folding>
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/construction/NearestNeighborMinEndTime.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/construction/NearestNeighborMinStartTime.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/exact/EVRPTWModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="293" lean-forward="true" selection-start-line="293" selection-end-line="293" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#EVRPTWModel#0;class#EVRPTWModel#0" />
-                <element signature="method#mapToIds#0;class#EVRPTWModel#0" />
-                <element signature="method#createVariables#0;class#EVRPTWModel#0" />
-                <element signature="method#addTimeFeasibilityForCustomersConstraint#0;class#EVRPTWModel#0" />
-                <element signature="method#addTimeFeasibilityForRechargingStationsConstraint#0;class#EVRPTWModel#0" />
-                <element signature="method#addTimeWindowConstraint#0;class#EVRPTWModel#0" />
-                <element signature="method#addNonNegativeCargoLoadForCustomersConstraint#0;class#EVRPTWModel#0" />
-                <element signature="method#addNonNegativeCargoLoadForDepotConstraint#0;class#EVRPTWModel#0" />
-                <element signature="method#addBatteryChargeForCustomersConstraint#0;class#EVRPTWModel#0" />
-                <element signature="method#addBatteryChargeForChargersConstraint#0;class#EVRPTWModel#0" />
-                <element signature="method#addFlowConservationConstraint#0;class#EVRPTWModel#0" />
-                <element signature="method#addConnectivityOfVisitsToChargersConstraint#0;class#EVRPTWModel#0" />
-                <element signature="method#addConnectivityOfCustomersConstraint#0;class#EVRPTWModel#0" />
-                <element signature="method#extractSolution#0;class#EVRPTWModel#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/src/main/resources/gurobi.jar!/gurobi/GRBModel.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="822" column="33" selection-start-line="822" selection-start-column="33" selection-end-line="822" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/Route.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="65" column="37" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#964#965#0" expanded="true" />
-                <element signature="e#1014#1015#0" expanded="true" />
-                <element signature="method#isComplete#0;class#Route#0" />
-                <element signature="method#getPayloadCapacity#0;class#Route#0" />
-                <element signature="method#areTimeWindowsViolated#0;class#Route#0" />
-                <element signature="method#getCustomers#0;class#Route#0" />
-                <element signature="method#getNumberOfCustomers#0;class#Route#0" />
-                <element signature="method#evalRoute#0;class#Route#0" />
-                <element signature="method#equals#0;class#Route#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/EVRPTWInstance.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="173" selection-start-line="173" selection-end-line="173" />
-              <folding>
-                <element signature="e#2913#2914#0" expanded="true" />
-                <element signature="e#2968#2969#0" expanded="true" />
-                <element signature="e#3748#3749#0" expanded="true" />
-                <element signature="e#3783#3784#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/exact/GurobiModel.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/construction/KNearestNeighborsMinReadyTime.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="408">
-              <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="33" column="25" lean-forward="true" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/RechargingStation.java">
+        <entry file="file://$PROJECT_DIR$/input/c101C10.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/input/c103_21.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="-1785" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/input/rc101_21.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/input/rc102C10.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/model/Node.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="43">
+              <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -218,7 +208,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>random</find>
       <find>calculateRemain</find>
       <find>nearest</find>
       <find>cal</find>
@@ -248,7 +237,11 @@
       <find>addDu</find>
       <find>distance</find>
       <find>addDum</find>
+      <find>Riut</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -256,49 +249,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/NodeFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/CustomerLocation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Solver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Model.java" />
-        <option value="$PROJECT_DIR$/src/main/java/FileReader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/verifier/EVRPTWInstance.java" />
-        <option value="$PROJECT_DIR$/src/main/java/verifier/EVRPTWRouteVerifier.java" />
-        <option value="$PROJECT_DIR$/src/main/java/verifier/RoutesLoader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/verifier/SchneiderLoader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ConstructionHeuristic.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ga/Population.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ga/GeneticAlgorithm.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ga/Chromosome.java" />
-        <option value="$PROJECT_DIR$/input/c103_21.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/Heuristic.java" />
-        <option value="$PROJECT_DIR$/src/main/java/GiantRouteHeuristic.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ShortestPathSolver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/GiantRouteConstructionStrategy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/KNearestNeighborsMinDueDate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/KNearestNeighborsMinReadyDate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/KNearestNeighborsMinEndTime.java" />
         <option value="$PROJECT_DIR$/src/main/java/NearestNeighborMinStartTime.java" />
         <option value="$PROJECT_DIR$/src/main/java/InfeasibleRouteException.java" />
         <option value="$PROJECT_DIR$/src/main/java/BeasleyHeuristic.java" />
         <option value="$PROJECT_DIR$/src/main/java/NearestNeighborMinEndTime.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/RouteHelper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/construction/BeasleyHeuristic.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Customer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/greedy/GreedyAlgorithm.java" />
         <option value="$PROJECT_DIR$/src/main/java/exact/Test.java" />
         <option value="$PROJECT_DIR$/input/c101C5.txt" />
         <option value="$PROJECT_DIR$/src/main/java/EbayPolicyExample.java" />
         <option value="$PROJECT_DIR$/src/main/java/OWASPTest.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/model/RechargingStation.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Node.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Depot.java" />
-        <option value="$PROJECT_DIR$/src/main/java/exact/GurobiModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/EVRPTWInstance.java" />
         <option value="$PROJECT_DIR$/src/main/java/exact/GurobiSolver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ga/OrderedCrossover.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Customer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ga/NeighbourhoodGenerationStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ga/SwapCustomers.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ga/LocalSearch.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Solution.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ga/AbstractNeighbourhoodGeneration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ga/TwoOpt.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ga/TwoOptStar.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ga/Selection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/greedy/GreedyAlgorithm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ga/Population.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ga/Crossover.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ga/Chromosome.java" />
+        <option value="$PROJECT_DIR$/src/main/java/exact/GurobiModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/construction/KNearestNeighborsMinReadyTime.java" />
+        <option value="$PROJECT_DIR$/src/main/java/construction/NearestNeighborMinEndTime.java" />
+        <option value="$PROJECT_DIR$/src/main/java/construction/NearestNeighborMinStartTime.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Route.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/exact/EVRPTWModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/EVRPTWInstance.java" />
+        <option value="$PROJECT_DIR$/src/main/java/construction/BeasleyHeuristic.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ga/GeneticAlgorithm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/rest/pom.xml" />
+        <option value="$PROJECT_DIR$/rest/src/main/java/org/baeldung /App.java" />
+        <option value="$PROJECT_DIR$/solver/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/solver/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/solver/Main.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/VehicleRoutingApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uaic/fii/VehicleRoutingApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uaic/fii/control/service/InstanceService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uaic/fii/solver/model/Node.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uaic/fii/model/Instance.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uaic/fii/control/service/InstanceServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uaic/fii/solver/model/Customer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uaic/fii/boundry/controller/InstanceController.java" />
       </list>
     </option>
   </component>
@@ -308,11 +309,36 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/visualization/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/visualization/package.json" />
+    </packageJsonPaths>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
+    <option name="x" value="-130" />
     <option name="y" value="-10" />
-    <option name="width" value="1940" />
-    <option name="height" value="725" />
+    <option name="width" value="1945" />
+    <option name="height" value="670" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>Maven</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>MavenModelInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -322,27 +348,36 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="CatdeaLogs" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="vehiclerouting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Dizertatie" type="47feb1d3:ProjectViewModuleNode" />
+            </path>
+            <path>
+              <item name="vehiclerouting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Dizertatie" type="47feb1d3:ProjectViewModuleNode" />
               <item name="Dizertatie" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vehiclerouting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Dizertatie" type="47feb1d3:ProjectViewModuleNode" />
               <item name="Dizertatie" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vehiclerouting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Dizertatie" type="47feb1d3:ProjectViewModuleNode" />
               <item name="Dizertatie" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vehiclerouting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Dizertatie" type="47feb1d3:ProjectViewModuleNode" />
               <item name="Dizertatie" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -350,37 +385,89 @@
             </path>
             <path>
               <item name="vehiclerouting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Dizertatie" type="47feb1d3:ProjectViewModuleNode" />
               <item name="Dizertatie" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="exact" type="462c0819:PsiDirectoryNode" />
+              <item name="uaic" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vehiclerouting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Dizertatie" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="Dizertatie" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="uaic" type="462c0819:PsiDirectoryNode" />
+              <item name="fii" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vehiclerouting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Dizertatie" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="Dizertatie" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="uaic" type="462c0819:PsiDirectoryNode" />
+              <item name="fii" type="462c0819:PsiDirectoryNode" />
+              <item name="solver" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vehiclerouting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Dizertatie" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="Dizertatie" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="uaic" type="462c0819:PsiDirectoryNode" />
+              <item name="fii" type="462c0819:PsiDirectoryNode" />
+              <item name="solver" type="462c0819:PsiDirectoryNode" />
+              <item name="construction" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vehiclerouting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Dizertatie" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
+      <pane id="CatdeaLogs" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586342238196" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588439900333" />
     <property name="last.edited.regexp" value="Q Vehicle fuel tank capacity /79.69/" />
-    <property name="last_opened_file_path" value="C:/gurobi901/win64/bin/GurobiJni90.dll" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../New folder/EVRP" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.27701148" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="spring" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\BogdanBo\Documents\Facultate\Dizertatie\solver" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="uaic.fii" />
+      <recent name="solver" />
       <recent name="exception" />
       <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\BogdanBo\Documents\Facultate\Dizertatie\src\main\resources" />
+      <recent name="C:\Users\BogdanBo\Documents\Facultate\Dizertatie\solver\src" />
+      <recent name="C:\Users\BogdanBo\Documents\Facultate\Dizertatie\src\main" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -395,13 +482,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Spring Boot.VehicleRoutingApplication">
     <configuration name="Chromosome" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ga.Chromosome" />
+      <option name="MAIN_CLASS_NAME" value="uaic.fii.solver.ga.Chromosome" />
       <module name="Dizertatie" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ga.*" />
+          <option name="PATTERN" value="uaic.fii.solver.ga.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -409,19 +496,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConstructionHeuristic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ConstructionHeuristic" />
-      <module name="Dizertatie" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="GurobiSolver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="exact.GurobiSolver" />
+      <option name="MAIN_CLASS_NAME" value="uaic.fii.solver.exact.GurobiSolver" />
       <module name="Dizertatie" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="exact.*" />
+          <option name="PATTERN" value="uaic.fii.solver.exact.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -430,7 +510,7 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="MAIN_CLASS_NAME" value="uaic.fii.solver.Main" />
       <module name="Dizertatie" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -443,20 +523,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="VehicleRoutingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="Dizertatie" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="uaic.fii.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="uaic.fii.VehicleRoutingApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="Application.ConstructionHeuristic" />
       <item itemvalue="Application.Chromosome" />
       <item itemvalue="Application.GurobiSolver" />
       <item itemvalue="Application.OWASPTest" />
+      <item itemvalue="Spring Boot.VehicleRoutingApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.VehicleRoutingApplication" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.OWASPTest" />
         <item itemvalue="Application.GurobiSolver" />
         <item itemvalue="Application.Chromosome" />
-        <item itemvalue="Application.ConstructionHeuristic" />
       </list>
     </recent_temporary>
   </component>
@@ -512,34 +605,46 @@
       <workItem from="1586201117015" duration="4069000" />
       <workItem from="1586252732819" duration="37000" />
       <workItem from="1586272782224" duration="9803000" />
+      <workItem from="1586355192092" duration="769000" />
+      <workItem from="1586886866102" duration="10372000" />
+      <workItem from="1587310892304" duration="40260000" />
+      <workItem from="1587663827831" duration="5152000" />
+      <workItem from="1587891273534" duration="13680000" />
+      <workItem from="1588180871341" duration="9566000" />
+      <workItem from="1588238724550" duration="28000" />
+      <workItem from="1588272476419" duration="5020000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="428939000" />
+    <option name="totallyTimeSpent" value="513786000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.493578" weight="0.3161074" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.493578" visible="true" weight="0.3489933" />
       <window_info id="Structure" order="1" sideWeight="0.50642204" side_tool="true" weight="0.2872483" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.37677053" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.49150142" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.45184135" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.39943343" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.34419262" />
+      <window_info anchor="bottom" id="Spring" order="12" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -549,9 +654,10 @@
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.493578" visible="true" weight="0.3161074" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.493578" visible="true" weight="0.33489934" />
       <window_info id="Structure" order="1" sideWeight="0.50642204" side_tool="true" weight="0.2872483" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -560,8 +666,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.47875354" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.43342775" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33427763" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.57223797" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -591,16 +697,22 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/model/Route.java</url>
-          <line>76</line>
+          <url>file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/construction/BeasleyHeuristic.java</url>
+          <line>37</line>
           <properties />
-          <option name="timeStamp" value="32" />
+          <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/model/Route.java</url>
-          <line>54</line>
+          <url>file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/construction/BeasleyHeuristic.java</url>
+          <line>92</line>
           <properties />
-          <option name="timeStamp" value="35" />
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/model/Route.java</url>
+          <line>55</line>
+          <properties />
+          <option name="timeStamp" value="49" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -617,6 +729,11 @@
       </expression>
     </expressions>
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>route.isFeasible()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>instance.getNodes()</expression-string>
         <language-id>JAVA</language-id>
@@ -657,355 +774,191 @@
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>instance.getTimeWindow(current).getStart()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/ConstructionHeuristic.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Heuristic.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/construction/NearestNeighborMinEndTime.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/SwapCustomers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="31" column="40" lean-forward="true" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/construction/GiantRouteConstructionStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ga/Chromosome.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-994">
-          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ga/GeneticAlgorithm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-714">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/construction/KNearestNeighborsMinEndTime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/construction/NearestNeighborMinStartTime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-37">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/construction/KNearestNeighborsMinReadyTime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mip.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider" />
-    </entry>
-    <entry file="jar://D:/MakelaarSuite/Java/jre8u131/jre/lib/rt.jar!/java/util/List.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="46" column="4" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/verifier/RoutesLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-331">
-          <caret line="38" column="36" lean-forward="true" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/verifier/EVRPTWRouteVerifier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/greedy/GreedyAlgorithm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/MakelaarSuite/Java/jre8u131/jre/lib/rt.jar!/java/lang/System.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1564">
-          <caret line="128" column="30" selection-start-line="128" selection-start-column="30" selection-end-line="128" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/construction/ShortestPathSolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/RouteHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/src/main/resources/gurobi.jar!/gurobi/GRBQuadExpr.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
+        <state relative-caret-position="170">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/verifier/SchneiderLoader.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/model/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="137" column="27" selection-start-line="137" selection-start-column="15" selection-end-line="137" selection-end-column="27" />
+        <state relative-caret-position="493">
+          <caret line="37" column="25" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/src/main/resources/gurobi.jar!/gurobi/GRBExpr.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/src/main/resources/gurobi.jar!/gurobi/GRBLinExpr.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2172">
-          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/src/main/resources/gurobi.jar!/gurobi/GRBVar.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2686">
-          <caret line="172" selection-start-line="172" selection-end-line="172" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/MakelaarSuite/Java/jre8u131/jre/lib/rt.jar!/java/lang/Object.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input/c205C10.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input/r104C5.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/LocalSearch.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" column="49" lean-forward="true" selection-start-line="1" selection-start-column="49" selection-end-line="1" selection-end-column="49" />
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/owasp/encoder/encoder/1.2.2/encoder-1.2.2.jar!/org/owasp/encoder/XMLEncoder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1173">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/owasp/encoder/encoder/1.2.2/encoder-1.2.2.jar!/org/owasp/encoder/Encoders.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/owasp/encoder/encoder/1.2.2/encoder-1.2.2.jar!/org/owasp/encoder/Encode.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="85" column="33" lean-forward="true" selection-start-line="85" selection-start-column="33" selection-end-line="85" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/EbayPolicyExample.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/EbayPolicyExample.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/OWASPTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/exception/InfeasibleRouteException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/exact/GurobiSolver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/construction/BeasleyHeuristic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="76" column="23" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input/c101C10.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input/c101_21.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/src/main/resources/gurobi.jar!/gurobi/GRB.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2516">
-          <caret line="647" column="8" selection-start-line="647" selection-start-column="8" selection-end-line="647" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input/c103C5.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/MakelaarSuite/Java/jre8u131/jre/lib/rt.jar!/java/util/ArrayList.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="308" selection-start-line="308" selection-end-line="308" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input/c101C5.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="47" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/exact/GurobiModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+          <caret line="40" column="60" lean-forward="true" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/RechargingStation.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/AbstractNeighbourhoodGeneration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="400">
+          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Depot.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/construction/GiantRouteConstructionStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="68">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Route.java">
+    <entry file="jar://D:/MakelaarSuite/Java/jre8u131/jre/lib/rt.jar!/java/util/stream/Stream.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="63" column="13" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/TwoOptStar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/greedy/GreedyAlgorithm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="65" column="37" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/Population.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/Crossover.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="226" column="13" selection-start-line="226" selection-start-column="13" selection-end-line="226" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/Chromosome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/Selection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="70" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/exact/GurobiModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/construction/KNearestNeighborsMinEndTime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/model/Route.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#964#965#0" expanded="true" />
-            <element signature="e#1014#1015#0" expanded="true" />
+            <element signature="method#Route#2;class#Route#0" />
+            <element signature="method#Route#3;class#Route#0" />
+            <element signature="e#948#949#0" expanded="true" />
+            <element signature="e#994#995#0" expanded="true" />
             <element signature="method#isComplete#0;class#Route#0" />
             <element signature="method#getPayloadCapacity#0;class#Route#0" />
+            <element signature="method#isTankCapacityViolated#0;class#Route#0" />
             <element signature="method#areTimeWindowsViolated#0;class#Route#0" />
+            <element signature="method#calculateArrivingTimeAtCustomer#0;class#Route#0" />
+            <element signature="method#getTotalDistance#0;class#Route#0" />
+            <element signature="method#calculateRemainingTankCapacity#0;class#Route#0" />
             <element signature="method#getCustomers#0;class#Route#0" />
-            <element signature="method#getNumberOfCustomers#0;class#Route#0" />
-            <element signature="method#evalRoute#0;class#Route#0" />
             <element signature="method#equals#0;class#Route#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/EVRPTWInstance.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/construction/BeasleyHeuristic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="173" selection-start-line="173" selection-end-line="173" />
-          <folding>
-            <element signature="e#2913#2914#0" expanded="true" />
-            <element signature="e#2968#2969#0" expanded="true" />
-            <element signature="e#3748#3749#0" expanded="true" />
-            <element signature="e#3783#3784#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="423">
+          <caret line="101" column="9" selection-start-line="101" selection-start-column="9" selection-end-line="101" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+    <entry file="file://$PROJECT_DIR$/input/rc204C15.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/GeneticAlgorithm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="339">
+          <caret line="267" column="74" selection-start-line="267" selection-start-column="74" selection-end-line="267" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mip.log" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/TwoOpt.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest/src/main/java/org/baeldung /App.java" />
+    <entry file="file://$PROJECT_DIR$/rest/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/fii.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/boundry/controller.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/VehicleRoutingApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="553">
+          <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/exact/EVRPTWModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="237" column="25" selection-start-line="237" selection-start-column="25" selection-end-line="237" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1586292792633" expanded="true" signature="742:907" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/exact/GurobiSolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="246" column="44" selection-start-line="246" selection-start-column="44" selection-end-line="246" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/src/main/resources/gurobi.jar!/gurobi/GRBModel.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="822" column="33" selection-start-line="822" selection-start-column="33" selection-end-line="822" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/exact/EVRPTWModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="293" lean-forward="true" selection-start-line="293" selection-end-line="293" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#EVRPTWModel#0;class#EVRPTWModel#0" />
             <element signature="method#mapToIds#0;class#EVRPTWModel#0" />
             <element signature="method#createVariables#0;class#EVRPTWModel#0" />
+            <element signature="method#createConstraints#0;class#EVRPTWModel#0" />
             <element signature="method#addTimeFeasibilityForCustomersConstraint#0;class#EVRPTWModel#0" />
             <element signature="method#addTimeFeasibilityForRechargingStationsConstraint#0;class#EVRPTWModel#0" />
             <element signature="method#addTimeWindowConstraint#0;class#EVRPTWModel#0" />
@@ -1016,8 +969,178 @@
             <element signature="method#addFlowConservationConstraint#0;class#EVRPTWModel#0" />
             <element signature="method#addConnectivityOfVisitsToChargersConstraint#0;class#EVRPTWModel#0" />
             <element signature="method#addConnectivityOfCustomersConstraint#0;class#EVRPTWModel#0" />
-            <element signature="method#extractSolution#0;class#EVRPTWModel#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/input/c101C5.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/devTools/jdk8u202/src.zip!/java/nio/file/Path.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="187" column="9" selection-start-line="187" selection-start-column="9" selection-end-line="187" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.31/tomcat-embed-core-9.0.31.jar!/org/apache/catalina/core/ApplicationFilterChain.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/devTools/jdk8u202/src.zip!/java/nio/file/Files.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="2225" column="7" selection-start-line="2225" selection-start-column="7" selection-end-line="2225" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/model/EVRPTWInstance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2567">
+          <caret line="196" column="76" selection-start-line="196" selection-start-column="76" selection-end-line="196" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-web/5.2.4.RELEASE/spring-web-5.2.4.RELEASE.jar!/org/springframework/web/bind/annotation/GetMapping.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/verifier/SchneiderLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/control/service/InstanceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1588186076548" expanded="true" signature="427:1153" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/control/service/InstanceServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/model/Instance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#520#521#0" expanded="true" />
+            <element signature="e#552#553#0" expanded="true" />
+            <element signature="e#610#611#0" expanded="true" />
+            <element signature="e#652#653#0" expanded="true" />
+            <element signature="e#714#715#0" expanded="true" />
+            <element signature="e#755#756#0" expanded="true" />
+            <element signature="e#931#932#0" expanded="true" />
+            <element signature="e#959#960#0" expanded="true" />
+            <element signature="e#1000#1001#0" expanded="true" />
+            <element signature="e#1034#1035#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/model/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+          <folding>
+            <element signature="e#629#630#0" expanded="true" />
+            <element signature="e#656#657#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/model/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/boundry/controller/InstanceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="30" column="53" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input/c101C10.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input/c103_21.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1785" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input/rc101_21.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input/rc102C10.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input/c101C5.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/construction/NearestNeighborMinEndTime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/construction/NearestNeighborMinStartTime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/construction/KNearestNeighborsMinReadyTime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="33" column="25" lean-forward="true" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -1079,6 +1202,18 @@
               <list>
                 <option value="0.27701148" />
                 <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
