@@ -3,8 +3,8 @@ package uaic.fii.boundry.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import uaic.fii.control.service.InstanceService;
+import uaic.fii.model.EVRPTWInstance;
 import uaic.fii.model.Instance;
-import uaic.fii.solver.model.EVRPTWInstance;
 
 import java.io.IOException;
 import java.util.List;
@@ -27,7 +27,7 @@ public class InstanceController {
     }
 
     @GetMapping(value = "/filter")
-    public Instance getInstanceByName(@RequestParam(name = "name") String name) throws IOException {
+    public EVRPTWInstance getInstanceByName(@RequestParam(name = "name") String name) throws IOException {
         return instanceService.getInstanceByName(name);
     }
 

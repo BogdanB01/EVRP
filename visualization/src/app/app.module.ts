@@ -8,6 +8,7 @@ import { MaterialModule } from './material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { SnackBarService } from './services/snackbar.service';
 import { InstanceService } from './services/instance.service';
+import { SolutionService } from './services/solution.service';
 import { InstancesComponent } from './components/instances/instances.component';
 import { LegendComponent } from './components/legend/legend.component';
 
@@ -27,7 +28,8 @@ import { LegendComponent } from './components/legend/legend.component';
   ],
   providers: [
     SnackBarService,
-    InstanceService
+    InstanceService,
+    SolutionService
   ],
   bootstrap: [AppComponent]
 })

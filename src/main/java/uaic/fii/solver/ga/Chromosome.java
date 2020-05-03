@@ -1,7 +1,9 @@
 package uaic.fii.solver.ga;
 
-import uaic.fii.solver.construction.BeasleyHeuristic;
-import uaic.fii.solver.model.*;
+import uaic.fii.model.EVRPTWInstance;
+import uaic.fii.model.Node;
+import uaic.fii.model.Route;
+import uaic.fii.solver.greedy.BeasleyHeuristic;
 
 import java.util.*;
 import java.util.stream.Collectors;

@@ -4,7 +4,8 @@ import gurobi.GRB;
 import gurobi.GRBException;
 import gurobi.GRBLinExpr;
 import gurobi.GRBVar;
-import uaic.fii.solver.model.*;
+import uaic.fii.model.*;
+import uaic.fii.util.Algorithm;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -303,7 +304,7 @@ public class EVRPTWModel extends GurobiModel {
     }
 
     @Override
-    protected void extractSolution() throws GRBException {
+    protected Solution extractSolution() throws GRBException {
         List<Route> routes = new ArrayList<>();
         Route route = new Route(instance);
 
@@ -336,10 +337,6 @@ public class EVRPTWModel extends GurobiModel {
             }
         }
 
-        double distance = 0;
-        for (Route r : routes) {
-            System.out.println(r.getNodes() + " " + r.isFeasible());
-        }
-        System.out.println("Distance = " + distance);
+        return new Solution(instance, Algorithm.EXACT, routes);
     }
 }

@@ -1,7 +1,10 @@
-package uaic.fii.solver.construction;
+package uaic.fii.solver.greedy;
 
+import uaic.fii.model.EVRPTWInstance;
+import uaic.fii.model.Node;
+import uaic.fii.model.RechargingStation;
+import uaic.fii.model.Route;
 import uaic.fii.solver.exception.InfeasibleRouteException;
-import uaic.fii.solver.model.*;
 import org.javatuples.Pair;
 
 import java.util.*;

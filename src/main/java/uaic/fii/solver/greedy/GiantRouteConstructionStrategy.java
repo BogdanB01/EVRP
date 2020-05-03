@@ -1,6 +1,6 @@
-package uaic.fii.solver.construction;
+package uaic.fii.solver.greedy;
 
-import uaic.fii.solver.model.Node;
+import uaic.fii.model.Node;
 
 import java.util.List;
 

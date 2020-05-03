@@ -3,7 +3,10 @@ package uaic.fii.solver.exact;
 import gurobi.GRBEnv;
 import gurobi.GRBException;
 import gurobi.GRBModel;
-import uaic.fii.solver.model.EVRPTWInstance;
+import uaic.fii.model.EVRPTWInstance;
+import uaic.fii.model.Solution;
+
+import java.io.IOException;
 
 public abstract class GurobiModel {
 
@@ -31,15 +34,16 @@ public abstract class GurobiModel {
 
     protected abstract void createObjective() throws GRBException;
 
-    protected abstract void extractSolution() throws GRBException;
+    protected abstract Solution extractSolution() throws GRBException;
 
-    public void solve() throws GRBException {
+    public void solve() throws GRBException, IOException {
         start();
         createVariables();
         createObjective();
         createConstraints();
         model.optimize();
-        extractSolution();
+        Solution solution = extractSolution();
+        solution.saveToFile();
         dispose();
     }
 

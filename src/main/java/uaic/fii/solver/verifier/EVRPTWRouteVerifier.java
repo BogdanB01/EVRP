@@ -1,7 +1,7 @@
 package uaic.fii.solver.verifier;
 
-import uaic.fii.solver.model.EVRPTWInstance;
-import uaic.fii.solver.model.Node;
+import uaic.fii.model.EVRPTWInstance;
+import uaic.fii.model.Node;
 import java.util.List;
 import java.util.Locale;
 

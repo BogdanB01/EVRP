@@ -1,9 +1,9 @@
 package uaic.fii.solver.ga;
 
-import uaic.fii.solver.model.EVRPTWInstance;
-import uaic.fii.solver.model.Node;
-import uaic.fii.solver.model.Route;
-import uaic.fii.solver.model.Solution;
+import uaic.fii.model.EVRPTWInstance;
+import uaic.fii.model.Node;
+import uaic.fii.model.Route;
+import uaic.fii.model.Solution;
 
 import java.util.Collections;
 import java.util.Optional;

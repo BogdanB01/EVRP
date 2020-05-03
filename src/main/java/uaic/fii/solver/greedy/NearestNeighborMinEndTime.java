@@ -1,8 +1,8 @@
-package uaic.fii.solver.construction;
+package uaic.fii.solver.greedy;
 
-import uaic.fii.solver.model.Customer;
-import uaic.fii.solver.model.EVRPTWInstance;
-import uaic.fii.solver.model.Node;
+import uaic.fii.model.Customer;
+import uaic.fii.model.EVRPTWInstance;
+import uaic.fii.model.Node;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -11,14 +11,14 @@ import java.util.NoSuchElementException;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.stream.Collectors;
 
-public class NearestNeighborMinStartTime implements GiantRouteConstructionStrategy {
+public class NearestNeighborMinEndTime implements GiantRouteConstructionStrategy {
 
     private final EVRPTWInstance instance;
     private final List<Customer> customers;
 
     private static final double TOLERANCE = 1.8;
 
-    public NearestNeighborMinStartTime(EVRPTWInstance instance) {
+    public NearestNeighborMinEndTime(EVRPTWInstance instance) {
         this.instance = instance;
         this.customers = instance.getCustomers();
     }
@@ -39,7 +39,7 @@ public class NearestNeighborMinStartTime implements GiantRouteConstructionStrate
             possibleSuccessors.sort(Comparator.comparing(n -> instance.getTravelDistance(n, lastPosition.get())));
 
             Node successor = possibleSuccessors.stream()
-                    .min(Comparator.comparing(n -> instance.getTimeWindow(n).getStart()))
+                    .min(Comparator.comparing(n -> instance.getTimeWindow(n).getEnd()))
                     .orElseThrow(NoSuchElementException::new);
             giantRoute.add(successor);
             lastPosition.set(successor);

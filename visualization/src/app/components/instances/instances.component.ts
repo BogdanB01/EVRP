@@ -8,6 +8,9 @@ import { APP_CONFIG } from 'src/app/app.config';
 import { Customer } from 'src/app/models/customer';
 import { RechargingStation } from 'src/app/models/recharging.station';
 import { Depot } from 'src/app/models/depot';
+import { Algorithm } from 'src/app/models/algorithm';
+import { SolutionService } from 'src/app/services/solution.service';
+import { Solution } from 'src/app/models/solution';
 
 @Component({
     selector: 'app-instances',
@@ -16,14 +19,18 @@ import { Depot } from 'src/app/models/depot';
 })
 export class InstancesComponent implements OnInit {
 
-    @ViewChild('instance', { static: false }) el: ElementRef;
-    private networkInstance: any;
+    @ViewChild('network', { static: false }) el: ElementRef;
+    private networkInstance: Network;
 
+    get algorithm() { return Algorithm; }
     selectedInstance;
     instances: Array<Instance> = [];
     instance: Instance;
+    solution: Solution;
+    edges: DataSet<any> = new DataSet<any>([]);
 
     constructor(private instanceService: InstanceService,
+                private solutionService: SolutionService,
                 private snackbarService: SnackBarService) {
     }
 
@@ -39,19 +46,38 @@ export class InstancesComponent implements OnInit {
         if (select.value !== undefined) {
             this.instanceService.getInstanceByName(select.value).subscribe(instance => {
                 this.instance = instance;
-                this.draw();
+                console.log(this.instance);
+                this.drawNodes();
             }, err => {
                 this.snackbarService.showSnackBar('Could not load instance with name: ' + select.value);
             });
         }
     }
 
-    private draw(): void {
+    loadSolution(algorithm: Algorithm) {
+        this.solutionService.getSolutionByNameAndAlgorithm(this.selectedInstance, algorithm).subscribe(sol => {
+            this.solution = sol;
+            this.drawEdges();
+        }, err => {
+            this.snackbarService.showSnackBar('Could not load solution');
+        });
+    }
+
+    private drawEdges() {
+        const edges = new DataSet<any>([]);
+        this.solution.routes.forEach(route => {
+            for (let i = 1; i < route.nodes.length; i++) {
+                this.edges.add({ from: route.nodes[i - 1].name, to: route.nodes[i].name, arrows: 'to', color: { color: 'red' } });
+            }
+        });
+     //   this.networkInstance.redraw();
+    }
+
+    private drawNodes(): void {
         const container = this.el.nativeElement;
         const nodes = new DataSet<any>([]);
         this.addNodes(nodes);
 
-        const edges = new DataSet<any>([]);
         const options = {
             width: '100%',
             height: '800px',
@@ -63,7 +89,7 @@ export class InstancesComponent implements OnInit {
             },
             groups: APP_CONFIG.groups
         };
-        const data = { nodes, edges };
+        const data = { nodes, edges: this.edges };
         this.networkInstance = new Network(container, data, options);
         this.networkInstance.moveTo({
             position: {x: 0, y: 0},

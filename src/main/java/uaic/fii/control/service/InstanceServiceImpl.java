@@ -3,7 +3,7 @@ package uaic.fii.control.service;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 import uaic.fii.model.Instance;
-import uaic.fii.solver.model.EVRPTWInstance;
+import uaic.fii.model.EVRPTWInstance;
 import uaic.fii.solver.verifier.SchneiderLoader;
 
 import java.io.File;
@@ -28,16 +28,9 @@ public class InstanceServiceImpl implements InstanceService {
     }
 
     @Override
-    public Instance getInstanceByName(String name) throws IOException {
+    public EVRPTWInstance getInstanceByName(String name) throws IOException {
         String path = String.format("%s/%s.txt", INSTANCES.getPath(), name);
-        EVRPTWInstance evrptwInstance = new SchneiderLoader().load(new File(path));
-
-        Instance instance = mapToInstance(Paths.get(path));
-        instance.setCustomers(evrptwInstance.getCustomers());
-        instance.setRechargingStations(evrptwInstance.getRechargingStations());
-        instance.setDepot(evrptwInstance.getDepot());
-
-        return instance;
+        return new SchneiderLoader().load(new File(path));
     }
 
     private Instance mapToInstance(Path path) {

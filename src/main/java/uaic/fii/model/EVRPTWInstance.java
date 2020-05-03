@@ -1,4 +1,4 @@
-package uaic.fii.solver.model;
+package uaic.fii.model;
 
 import java.util.ArrayList;
 import java.util.HashMap;

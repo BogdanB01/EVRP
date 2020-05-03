@@ -16,7 +16,7 @@
     <button mat-menu-item>KNearest Neighbour Min Start Time</button>
     <button mat-menu-item>KNearest Neighbour Min End Time</button>
   </mat-menu>
-  <mat-button-toggle value="center" aria-label="Text align center">
+  <mat-button-toggle value="center" aria-label="Text align center" (click)="loadSolution(algorithm.EXACT)">
     Exact solution
   </mat-button-toggle>
   <mat-button-toggle value="right" aria-label="Text align right">
@@ -24,13 +24,19 @@
   </mat-button-toggle>
 </mat-button-toggle-group>
 
-<!-- <div class="example-selected-value">Selected value: {{group.value}}</div> -->
-
 <div class="container" style="display: flex;">
-  <div style="position: absolute; z-index: 2; margin-left: 20px;">
-    <p>Time taken: 524 sec</p>
-    <p>Cost: 2200</p>
+  <div style="position: absolute; z-index: 2; margin-left: 20px;" *ngIf="selectedInstance && instance">
+    <p>Number of nodes: {{instance.numNodes}}</p>
+    <p>Number of customers: {{ instance.numCustomers }}</p>
+    <p>Recharging rate: {{ instance.rechargingRate }} </p>
+    <p>Vehicle average velocity: {{ instance.vehicleAverageVelocity }} </p>
+    <p>Vehicle capacity: {{ instance.vehicleCapacity }}</p>
+    <p>Vehicle energy capacity: {{ instance.vehicleEnergyCapacity }} </p>
+    <p>Vehicle energy consumption: {{ instance.vehicleEnergyConsumption }} </p>
+    <p *ngIf="solution">Time taken: {{solution.timeTaken}}</p>
+    <p *ngIf="solution">Cost: {{solution.cost}}</p>
   </div>
-  <div style="flex-grow: 1; z-index: 1;" #instance></div>
+  <div style="flex-grow: 1; z-index: 1;" #network></div>
   <app-legend *ngIf=selectedInstance></app-legend>
 </div>
+

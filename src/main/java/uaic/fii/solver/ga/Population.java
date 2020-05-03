@@ -1,7 +1,7 @@
 package uaic.fii.solver.ga;
 
-import uaic.fii.solver.model.EVRPTWInstance;
-import uaic.fii.solver.model.Node;
+import uaic.fii.model.EVRPTWInstance;
+import uaic.fii.model.Node;
 
 import java.nio.BufferOverflowException;
 import java.util.ArrayList;

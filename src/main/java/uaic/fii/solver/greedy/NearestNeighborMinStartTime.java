@@ -1,8 +1,8 @@
-package uaic.fii.solver.construction;
+package uaic.fii.solver.greedy;
 
-import uaic.fii.solver.model.Customer;
-import uaic.fii.solver.model.EVRPTWInstance;
-import uaic.fii.solver.model.Node;
+import uaic.fii.model.Customer;
+import uaic.fii.model.EVRPTWInstance;
+import uaic.fii.model.Node;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -11,17 +11,17 @@ import java.util.NoSuchElementException;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.stream.Collectors;
 
-public class KNearestNeighborsMinReadyTime implements GiantRouteConstructionStrategy{
+public class NearestNeighborMinStartTime implements GiantRouteConstructionStrategy {
 
-    private EVRPTWInstance instance;
-    private static final int K = 3;
-    private List<Customer> customers;
+    private final EVRPTWInstance instance;
+    private final List<Customer> customers;
 
-    public KNearestNeighborsMinReadyTime(EVRPTWInstance instance) {
+    private static final double TOLERANCE = 1.8;
+
+    public NearestNeighborMinStartTime(EVRPTWInstance instance) {
         this.instance = instance;
         this.customers = instance.getCustomers();
     }
-
 
     @Override
     public List<Node> construct() {
@@ -31,16 +31,19 @@ public class KNearestNeighborsMinReadyTime implements GiantRouteConstructionStra
         while (giantRoute.size() != customers.size()) {
             List<Node> possibleSuccessors = customers.stream()
                     .filter(n -> !giantRoute.contains(n))
-                    .sorted(Comparator.comparing(n -> instance.getTravelDistance(n, lastPosition.get())))
                     .collect(Collectors.toList());
+            double minimumDistance = possibleSuccessors.stream()
+                    .mapToDouble(n -> instance.getTravelDistance(n, lastPosition.get()))
+                    .min().orElseThrow(NoSuchElementException::new);
+            possibleSuccessors.removeIf(n -> instance.getTravelDistance(n, lastPosition.get()) > minimumDistance * TOLERANCE);
+            possibleSuccessors.sort(Comparator.comparing(n -> instance.getTravelDistance(n, lastPosition.get())));
+
             Node successor = possibleSuccessors.stream()
-                    .limit(K)
                     .min(Comparator.comparing(n -> instance.getTimeWindow(n).getStart()))
                     .orElseThrow(NoSuchElementException::new);
             giantRoute.add(successor);
             lastPosition.set(successor);
         }
-
         return giantRoute;
     }
 }

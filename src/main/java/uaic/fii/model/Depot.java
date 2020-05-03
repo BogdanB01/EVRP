@@ -1,4 +1,4 @@
-package uaic.fii.solver.model;
+package uaic.fii.model;
 
 public class Depot extends Node {
     private final String name;

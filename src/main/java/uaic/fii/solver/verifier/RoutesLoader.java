@@ -1,31 +1,24 @@
 package uaic.fii.solver.verifier;
 
-import uaic.fii.solver.model.EVRPTWInstance;
-import uaic.fii.solver.model.Node;
+import uaic.fii.model.EVRPTWInstance;
+import uaic.fii.model.Node;
+import uaic.fii.model.Route;
+import uaic.fii.model.Solution;
 
 import java.io.*;
+import java.lang.reflect.Parameter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-class RoutesLoader {
+public class RoutesLoader {
     private EVRPTWInstance instance;
 
     private RoutesLoader(EVRPTWInstance instance) {
         this.instance = instance;
     }
 
-    public static class CostRoutesPair {
-        final Double cost;
-        final List<List<Node>> routes;
-
-        public CostRoutesPair(Double cost, List<List<Node>> routes) {
-            this.cost = cost;
-            this.routes = routes;
-        }
-    }
-
-    public CostRoutesPair load(File solutionFile) {
+    public Solution load(File solutionFile) {
         try {
             BufferedReader in = new BufferedReader(new FileReader(solutionFile));
 
@@ -42,7 +35,17 @@ class RoutesLoader {
                 return null;
             }
 
-            List<List<Node>> routes = new ArrayList<>();
+            // second line is the time taken
+            line = nextLine((in));
+            double time;
+            try {
+                cost = Double.parseDouble(line);
+            } catch(NumberFormatException e) {
+                System.err.println("Error: second line of the solution has to be the time taken (number)");
+                return null;
+            }
+
+            List<Route> routes = new ArrayList<>();
             try {
                 while((line = nextLine(in)) != null)
                     routes.add(parseLine(line, instance));
@@ -51,7 +54,10 @@ class RoutesLoader {
                 System.err.println("Error: exception while parsing the nodes in the solution");
                 return null;
             }
-            return new CostRoutesPair(cost, routes);
+            Solution solution = new Solution(routes);
+            solution.setInstance(instance);
+            solution.setCost(cost);
+            return solution;
         } catch(FileNotFoundException e) {
             System.err.println("Error: couldn't open solution file " + solutionFile.getPath());
             return null;
@@ -68,9 +74,8 @@ class RoutesLoader {
         return line;
     }
 
-    private static List<Node> parseLine(String line, EVRPTWInstance instance) throws RuntimeException {
-        List<Node> list;
-        list = new ArrayList<>();
+    private static Route parseLine(String line, EVRPTWInstance instance) throws RuntimeException {
+        List<Node> list = new ArrayList<>();
         StringTokenizer tok = new StringTokenizer(line, " ,");
         for(; tok.hasMoreTokens(); ) {
             String id = tok.nextToken();
@@ -83,10 +88,10 @@ class RoutesLoader {
             else
                 throw new RuntimeException();
         }
-        return list;
+        return new Route(instance, list);
     }
 
-    static RoutesLoader create(EVRPTWInstance instance) {
+    public static RoutesLoader create(EVRPTWInstance instance) {
         return new RoutesLoader(instance);
     }
 }

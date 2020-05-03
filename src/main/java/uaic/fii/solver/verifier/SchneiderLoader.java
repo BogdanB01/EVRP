@@ -1,9 +1,9 @@
 package uaic.fii.solver.verifier;
 
-import uaic.fii.solver.model.Customer;
-import uaic.fii.solver.model.Depot;
-import uaic.fii.solver.model.EVRPTWInstance;
-import uaic.fii.solver.model.RechargingStation;
+import uaic.fii.model.Customer;
+import uaic.fii.model.Depot;
+import uaic.fii.model.EVRPTWInstance;
+import uaic.fii.model.RechargingStation;
 
 import java.io.*;
 import java.util.ArrayList;

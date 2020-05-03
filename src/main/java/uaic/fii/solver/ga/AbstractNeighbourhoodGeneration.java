@@ -1,7 +1,7 @@
 package uaic.fii.solver.ga;
 
-import uaic.fii.solver.model.EVRPTWInstance;
-import uaic.fii.solver.model.Solution;
+import uaic.fii.model.EVRPTWInstance;
+import uaic.fii.model.Solution;
 
 import java.util.List;
 import java.util.Optional;

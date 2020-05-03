@@ -1,4 +1,4 @@
-package uaic.fii.solver.construction;
+package uaic.fii.solver.greedy;
 
 import org.javatuples.Pair;
 

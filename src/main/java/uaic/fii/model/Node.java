@@ -1,9 +1,10 @@
-package uaic.fii.solver.model;
+package uaic.fii.model;
 
 import java.util.Objects;
 
 public class Node {
     public int id;
+    private String name;
 
     Node() {}
 
