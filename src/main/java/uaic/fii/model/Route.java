@@ -1,6 +1,7 @@
 package uaic.fii.model;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Route {
 
@@ -47,7 +48,7 @@ public class Route {
 
     public boolean isComplete() {
         Node depot = instance.getDepot();
-        return nodes.get(0).equals(depot) && nodes.get(nodes.size() - 1).equals(depot) &&  nodes.subList(1, nodes.size() - 1).contains(depot);
+        return nodes.get(0).equals(depot) && nodes.get(nodes.size() - 1).equals(depot) && ! nodes.subList(1, nodes.size() - 1).contains(depot);
     }
 
     public boolean isFeasible() {
@@ -221,6 +222,12 @@ public class Route {
         this.nodes.remove(node);
     }
 
+    public Route deepClone() {
+        List<Node> clonedNodes = nodes.stream()
+                .map(Node::deepClone).collect(Collectors.toList());
+        return new Route(instance, clonedNodes);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -234,5 +241,10 @@ public class Route {
         return Objects.hash(nodes);
     }
 
-
+    @Override
+    public String toString() {
+        return "Route{" +
+                "nodes=" + nodes +
+                '}';
+    }
 }

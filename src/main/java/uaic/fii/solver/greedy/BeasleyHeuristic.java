@@ -80,18 +80,7 @@ public class BeasleyHeuristic {
 
         while (!route.isFeasible()) {
             insertStationBefore(route, to);
-/*            List<RechargingStation> reachableStations = getReachableStations(route, route.getEnd());
-            if (reachableStations.size() == 0) {
-                throw new InfeasibleRouteException();
-            }
-
-            RechargingStation station = reachableStations.stream()
-                    .min(Comparator.comparing(e -> instance.getTravelDistance(to, e)))
-                    .orElseThrow(InfeasibleRouteException::new);
-            route.addNode(station);
-            route.addNode(to);*/
         }
-
 
         if (instance.getDepot().id != to.id &&
                 route.calculateRemainingTankCapacity(route.getEnd()) < instance.getVehicleEnergyCapacity() / 2) {
@@ -117,18 +106,7 @@ public class BeasleyHeuristic {
                 .min(Comparator.comparing(e -> instance.getTravelDistance(e, to)));
     }
 
-    private List<RechargingStation> getReachableStations(Route route, Node node) {
-        double tankCapacity = route.calculateRemainingTankCapacity(node);
-        double maxDistance = tankCapacity / instance.getVehicleEnergyConsumption();
-
-        return instance.getRechargingStations().stream()
-                .filter(e -> instance.getTravelDistance(node, e) <= maxDistance
-                        && node.id != e.id
-                        && ! route.getNodes().contains(e))
-                .collect(Collectors.toList());
-    }
     private void insertStationBefore(Route route, Node node) throws InfeasibleRouteException {
-        //route.removeNode(node);
         route.pop();
         RechargingStation rechargingStation = getClosestCharger(route, node)
                 .orElseThrow(InfeasibleRouteException::new);

@@ -3,45 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="78884da2-1acc-4099-a6f6-b5be831ef4e2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/c101C10.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/boundry/controller/InstanceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/boundry/controller/InstanceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/control/service/InstanceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/control/service/InstanceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/control/service/InstanceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/control/service/InstanceServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/model/Instance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/model/Instance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/model/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/model/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/model/Route.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/model/Route.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/model/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/model/Solution.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/construction/BeasleyHeuristic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/greedy/BeasleyHeuristic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/construction/GiantRouteConstructionStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/greedy/GiantRouteConstructionStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/construction/KNearestNeighborsMinEndTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/greedy/KNearestNeighborsMinEndTime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/construction/KNearestNeighborsMinReadyTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/greedy/KNearestNeighborsMinReadyTime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/construction/NearestNeighborMinEndTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/greedy/NearestNeighborMinEndTime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/construction/NearestNeighborMinStartTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/greedy/NearestNeighborMinStartTime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/construction/ShortestPathSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/greedy/ShortestPathSolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/exact/EVRPTWModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/exact/EVRPTWModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/exact/GurobiModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/exact/GurobiModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/exact/GurobiSolver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/AbstractNeighbourhoodGeneration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/AbstractNeighbourhoodGeneration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/Chromosome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/Chromosome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/Crossover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/Crossover.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/AbstractNeighbourhoodGeneration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/search/neighbourhood/AbstractNeighbourhoodGeneration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/GeneticAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/GeneticAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/Population.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/Population.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/SwapCustomers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/SwapCustomers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/TwoOpt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/TwoOpt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/TwoOptStar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/TwoOptStar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/greedy/GreedyAlgorithm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/model/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/model/Depot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/model/Depot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/model/EVRPTWInstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/model/EVRPTWInstance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/model/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/model/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/model/RechargingStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/model/RechargingStation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/model/Route.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/model/Route.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/model/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/model/Solution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/verifier/EVRPTWRouteVerifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/verifier/EVRPTWRouteVerifier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/verifier/RoutesLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/verifier/RoutesLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/verifier/SchneiderLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/verifier/SchneiderLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/src/app/components/instances/instances.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/src/app/components/instances/instances.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/src/app/components/instances/instances.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/src/app/components/instances/instances.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization/src/app/models/instance.ts" beforeDir="false" afterPath="$PROJECT_DIR$/visualization/src/app/models/instance.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/LocalSearch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/SwapCustomers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/TwoOpt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/TwoOptStar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/greedy/BeasleyHeuristic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uaic/fii/solver/greedy/BeasleyHeuristic.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -57,9 +29,9 @@
     <session id="1622673755">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="44" />
+          <entry key="project.closed" value="46" />
           <entry key="project.open.time.0" value="9" />
-          <entry key="project.open.time.1" value="8" />
+          <entry key="project.open.time.1" value="9" />
           <entry key="project.open.time.14" value="4" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="1" />
@@ -77,15 +49,15 @@
           <entry key="project.open.time.30" value="2" />
           <entry key="project.open.time.31" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="51" />
+          <entry key="project.open.time.8" value="2" />
+          <entry key="project.opened" value="53" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="54" />
           <entry key="gitignore" value="1" />
-          <entry key="java" value="372" />
+          <entry key="java" value="422" />
           <entry key="log" value="3" />
           <entry key="png" value="1" />
           <entry key="txt" value="41" />
@@ -96,7 +68,7 @@
         <counts>
           <entry key="CLASS" value="54" />
           <entry key="Image" value="1" />
-          <entry key="JAVA" value="372" />
+          <entry key="JAVA" value="422" />
           <entry key="Log" value="3" />
           <entry key="PLAIN_TEXT" value="42" />
           <entry key="XML" value="16" />
@@ -105,7 +77,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="61" />
-          <entry key="java" value="123761" />
+          <entry key="java" value="134021" />
           <entry key="regexp" value="1" />
           <entry key="txt" value="7" />
           <entry key="xml" value="102" />
@@ -113,7 +85,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="123761" />
+          <entry key="JAVA" value="134021" />
           <entry key="PLAIN_TEXT" value="68" />
           <entry key="RegExp" value="1" />
           <entry key="XML" value="102" />
@@ -122,7 +94,31 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/Chromosome.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/search/TabuSearch.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#324#325#0" expanded="true" />
+                <element signature="e#365#366#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -133,8 +129,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>calculateRemain</find>
-      <find>nearest</find>
       <find>cal</find>
       <find>feasibl</find>
       <find>while</find>
@@ -163,6 +157,8 @@
       <find>distance</find>
       <find>addDum</find>
       <find>Riut</find>
+      <find>clone</find>
+      <find>fea</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -174,23 +170,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/exact/GurobiSolver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ga/OrderedCrossover.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Customer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ga/NeighbourhoodGenerationStrategy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ga/SwapCustomers.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ga/LocalSearch.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Solution.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ga/AbstractNeighbourhoodGeneration.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ga/TwoOpt.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ga/TwoOptStar.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ga/Selection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/greedy/GreedyAlgorithm.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ga/Population.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ga/Crossover.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ga/Chromosome.java" />
-        <option value="$PROJECT_DIR$/src/main/java/exact/GurobiModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/construction/KNearestNeighborsMinReadyTime.java" />
         <option value="$PROJECT_DIR$/src/main/java/construction/NearestNeighborMinEndTime.java" />
         <option value="$PROJECT_DIR$/src/main/java/construction/NearestNeighborMinStartTime.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Route.java" />
@@ -215,16 +194,33 @@
         <option value="$PROJECT_DIR$/src/main/java/uaic/fii/model/Instance.java" />
         <option value="$PROJECT_DIR$/src/main/java/uaic/fii/control/service/InstanceServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/uaic/fii/util/Algorithm.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uaic/fii/model/Node.java" />
         <option value="$PROJECT_DIR$/src/main/java/uaic/fii/solver/exact/EVRPTWModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/uaic/fii/solver/exact/GurobiModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/uaic/fii/control/service/SolutionService.java" />
         <option value="$PROJECT_DIR$/src/main/java/uaic/fii/boundry/controller/SolutionController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uaic/fii/solver/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/uaic/fii/control/service/SolutionServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uaic/fii/model/Solution.java" />
         <option value="$PROJECT_DIR$/src/main/resources/solution/exact/c101C5.txt" />
         <option value="$PROJECT_DIR$/src/main/java/uaic/fii/solver/verifier/RoutesLoader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uaic/fii/solver/greedy/BeasleyHeuristic.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/search/AbstractNeighbourhoodGeneration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/search/SwapCustomers.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/search/StationInRe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/search/TwoOrOpt.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/search/TwoOptArcExchange.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/search/InterRouteExchange.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/search/InterRouteRelocate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/search/neighbourhood/InterRouteExchange.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/search/neighbourhood/AbstractNeighbourhoodGeneration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/search/neighbourhood/InterRouteRelocate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/search/neighbourhood/StationInRe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/search/neighbourhood/TwoOrOpt.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/GeneticAlgorithm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uaic/fii/solver/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uaic/fii/model/Solution.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uaic/fii/model/Node.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uaic/fii/model/Route.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/search/neighbourhood/TwoOptArcExchange.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/search/TabuSearch.java" />
       </list>
     </option>
   </component>
@@ -242,11 +238,11 @@
       <path value="$PROJECT_DIR$/visualization/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-430" />
-    <option name="y" value="-9" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="242" />
+    <option name="y" value="70" />
     <option name="width" value="1943" />
-    <option name="height" value="670" />
+    <option name="height" value="809" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -273,6 +269,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="CatdeaLogs" />
       <pane id="ProjectPane">
         <subPane>
@@ -346,6 +343,43 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="uaic" type="462c0819:PsiDirectoryNode" />
               <item name="fii" type="462c0819:PsiDirectoryNode" />
+              <item name="solver" type="462c0819:PsiDirectoryNode" />
+              <item name="ga" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vehiclerouting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Dizertatie" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="Dizertatie" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="uaic" type="462c0819:PsiDirectoryNode" />
+              <item name="fii" type="462c0819:PsiDirectoryNode" />
+              <item name="solver" type="462c0819:PsiDirectoryNode" />
+              <item name="ga" type="462c0819:PsiDirectoryNode" />
+              <item name="search" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vehiclerouting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Dizertatie" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="Dizertatie" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="uaic" type="462c0819:PsiDirectoryNode" />
+              <item name="fii" type="462c0819:PsiDirectoryNode" />
+              <item name="solver" type="462c0819:PsiDirectoryNode" />
+              <item name="greedy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vehiclerouting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Dizertatie" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="Dizertatie" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="uaic" type="462c0819:PsiDirectoryNode" />
+              <item name="fii" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -384,7 +418,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -395,7 +428,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588528141902" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588924175190" />
     <property name="last.edited.regexp" value="Q Vehicle fuel tank capacity /79.69/" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../New folder/EVRP" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -407,11 +440,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="uaic.fii.solver.ga.search.neighbourhood" />
+      <recent name="uaic.fii.solver.ga.search" />
       <recent name="uaic.fii.model" />
       <recent name="uaic.fii" />
       <recent name="solver" />
-      <recent name="exception" />
-      <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\BogdanBo\Documents\Facultate\Dizertatie\src\main\resources" />
@@ -434,13 +467,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.VehicleRoutingApplication">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Chromosome" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="uaic.fii.solver.ga.Chromosome" />
       <module name="Dizertatie" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="uaic.fii.solver.ga.*" />
+          <option name="PATTERN" value="uaic.fii.solver.ga.search.neighbourhood.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -497,8 +530,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.VehicleRoutingApplication" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Spring Boot.VehicleRoutingApplication" />
         <item itemvalue="Application.OWASPTest" />
         <item itemvalue="Application.GurobiSolver" />
         <item itemvalue="Application.Chromosome" />
@@ -565,17 +598,20 @@
       <workItem from="1588180871341" duration="9566000" />
       <workItem from="1588238724550" duration="28000" />
       <workItem from="1588272476419" duration="7102000" />
-      <workItem from="1588443142799" duration="16447000" />
+      <workItem from="1588443142799" duration="16451000" />
+      <workItem from="1588694279676" duration="12113000" />
+      <workItem from="1588789130826" duration="16804000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="532315000" />
+    <option name="totallyTimeSpent" value="561236000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.493578" visible="true" weight="0.35234898" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.493578" weight="0.27248323" />
       <window_info id="Structure" order="1" sideWeight="0.50642204" side_tool="true" weight="0.2872483" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -585,8 +621,8 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4036827" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.33144477" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.48441926" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.64164305" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -609,25 +645,28 @@
       <window_info anchor="right" id="Bean Validation" order="9" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.493578" visible="true" weight="0.33489934" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.493578" visible="true" weight="0.27248323" />
       <window_info id="Structure" order="1" sideWeight="0.50642204" side_tool="true" weight="0.2872483" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33427763" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.57223797" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4036827" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.64164305" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.39943343" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.34419262" />
+      <window_info anchor="bottom" id="Spring" order="12" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -637,6 +676,7 @@
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -653,18 +693,6 @@
           <line>37</line>
           <properties />
           <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/greedy/BeasleyHeuristic.java</url>
-          <line>92</line>
-          <properties />
-          <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/Main.java</url>
-          <line>25</line>
-          <properties />
-          <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/verifier/RoutesLoader.java</url>
@@ -687,6 +715,11 @@
       </expression>
     </expressions>
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>bestCandidate.getCost()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>String.join(File.separator, SOLUTIONS.getPath(), algorithm.getSaveLocation(), name)</expression-string>
         <language-id>JAVA</language-id>
@@ -727,119 +760,9 @@
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>isChargeable(clonedRoute)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/input/rc204C15.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/GeneticAlgorithm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="267" column="74" selection-start-line="267" selection-start-column="74" selection-end-line="267" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#setPopulation#0;class#GeneticAlgorithm#0" />
-            <element signature="method#setMaxGenerations#0;class#GeneticAlgorithm#0" />
-            <element signature="method#setK#0;class#GeneticAlgorithm#0" />
-            <element signature="method#setCrossoverRate#0;class#GeneticAlgorithm#0" />
-            <element signature="method#setLocalSearchRate#0;class#GeneticAlgorithm#0" />
-            <element signature="method#setRandom#0;class#GeneticAlgorithm#0" />
-            <element signature="method#getAverageDistanceOfFirstGeneration#0;class#GeneticAlgorithm#0" />
-            <element signature="method#getAverageDistanceOfLastGeneration#0;class#GeneticAlgorithm#0" />
-            <element signature="method#getBestDistanceOfFirstGeneration#0;class#GeneticAlgorithm#0" />
-            <element signature="method#getBestDistanceOfLastGeneration#0;class#GeneticAlgorithm#0" />
-            <element signature="method#getAverageDistanceOfEachGeneration#0;class#GeneticAlgorithm#0" />
-            <element signature="method#getBestDistanceOfEachGeneration#0;class#GeneticAlgorithm#0" />
-            <element signature="method#getAreaUnderAverageDistances#0;class#GeneticAlgorithm#0" />
-            <element signature="method#getAreaUnderBestDistances#0;class#GeneticAlgorithm#0" />
-            <element signature="method#createNextGeneration#0;class#GeneticAlgorithm#0" />
-            <element signature="method#crossover#0;class#GeneticAlgorithm#0" />
-            <element signature="class#CrossoverType#0;class#GeneticAlgorithm#0" />
-            <element signature="method#printProperties#0;class#GeneticAlgorithm#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mip.log" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/TwoOpt.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest/src/main/java/org/baeldung /App.java" />
-    <entry file="file://$PROJECT_DIR$/rest/pom.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/fii.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/boundry/controller.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/VehicleRoutingApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/input/c101C5.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/devTools/jdk8u202/src.zip!/java/nio/file/Path.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="187" column="9" selection-start-line="187" selection-start-column="9" selection-end-line="187" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.31/tomcat-embed-core-9.0.31.jar!/org/apache/catalina/core/ApplicationFilterChain.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="71" selection-start-line="71" selection-end-line="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/devTools/jdk8u202/src.zip!/java/nio/file/Files.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="2225" column="7" selection-start-line="2225" selection-start-column="7" selection-end-line="2225" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-web/5.2.4.RELEASE/spring-web-5.2.4.RELEASE.jar!/org/springframework/web/bind/annotation/GetMapping.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input/c101C5.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/greedy/NearestNeighborMinEndTime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/greedy/NearestNeighborMinStartTime.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -854,9 +777,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/input/c101C10.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/input/c101C10.txt" />
     <entry file="file://$PROJECT_DIR$/input/c103_21.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1617" />
@@ -876,9 +797,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -943,24 +861,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/exact/GurobiSolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2227">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/exact/GurobiSolver.java" />
     <entry file="jar://D:/devTools/jdk8u202/src.zip!/java/io/File.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="1338" column="19" selection-start-line="1338" selection-start-column="19" selection-end-line="1338" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/model/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
@@ -997,24 +902,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-239">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1588509892505" expanded="true" signature="700:1011" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/control/service/SolutionService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="60" lean-forward="true" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1043,9 +934,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="366">
           <caret line="31" column="76" lean-forward="true" selection-start-line="31" selection-start-column="76" selection-end-line="31" selection-end-column="76" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1060,9 +948,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1077,9 +962,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1094,42 +976,193 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/model/Solution.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/greedy/ShortestPathSolver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9">
-          <caret line="47" column="5" lean-forward="true" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+        <state relative-caret-position="68">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/greedy/BeasleyHeuristic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="88" column="38" lean-forward="true" selection-start-line="88" selection-start-column="38" selection-end-line="88" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/search/neighbourhood.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/search/SwapCustomers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#Solution#1;class#Solution#0" />
-            <element signature="e#920#921#0" expanded="true" />
-            <element signature="e#947#948#0" expanded="true" />
-            <element signature="e#987#988#0" expanded="true" />
-            <element signature="e#1019#1020#0" expanded="true" />
-            <element signature="e#1089#1090#0" expanded="true" />
-            <element signature="e#1121#1122#0" expanded="true" />
-            <element signature="e#1171#1172#0" expanded="true" />
-            <element signature="e#1213#1214#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/search/TwoOpt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-178">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/search/TwoOptStar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="22" column="61" lean-forward="true" selection-start-line="22" selection-start-column="61" selection-end-line="22" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/search/LocalSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/search/neighbourhood/InterRouteRelocate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/search/neighbourhood/StationInRe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/search/neighbourhood/TwoOrOpt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/greedy/KNearestNeighborsMinEndTime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/search/neighbourhood/InterRouteExchange.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#336#337#0" expanded="true" />
+            <element signature="e#367#368#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/search/neighbourhood/AbstractNeighbourhoodGeneration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/GeneticAlgorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="283" column="47" selection-start-line="283" selection-start-column="47" selection-end-line="283" selection-end-column="47" />
+          <folding>
+            <element signature="method#createNextGeneration#0;class#GeneticAlgorithm#0" />
+            <element signature="method#crossover#0;class#GeneticAlgorithm#0" />
+            <element signature="class#CrossoverType#0;class#GeneticAlgorithm#0" />
+            <element signature="method#printProperties#0;class#GeneticAlgorithm#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="32" column="49" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1588879556832" expanded="true" signature="748:1265" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/model/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1325#1326#0" expanded="true" />
+            <element signature="e#1357#1358#0" expanded="true" />
+            <element signature="e#1393#1394#0" expanded="true" />
+            <element signature="e#1425#1426#0" expanded="true" />
+            <element signature="e#1475#1476#0" expanded="true" />
+            <element signature="e#1517#1518#0" expanded="true" />
+            <element signature="e#1573#1574#0" expanded="true" />
+            <element signature="e#1613#1614#0" expanded="true" />
+            <element signature="e#1652#1653#0" expanded="true" />
+            <element signature="e#1684#1685#0" expanded="true" />
+            <element signature="e#1737#1738#0" expanded="true" />
+            <element signature="e#1779#1780#0" expanded="true" />
+            <element signature="e#1817#1818#0" expanded="true" />
+            <element signature="e#1853#1854#0" expanded="true" />
             <element signature="method#getIthRoute#0;class#Solution#0" />
             <element signature="method#setIthRoute#0;class#Solution#0" />
             <element signature="method#getTotalDistance#0;class#Solution#0" />
+            <element signature="e#2478#2479#0" expanded="true" />
+            <element signature="e#2526#2527#0" expanded="true" />
             <element signature="method#getSaveLocation#0;class#Solution#0" />
             <element signature="method#saveToFile#0;class#Solution#0" />
             <element signature="method#mapToString#0;class#Solution#0" />
+            <element signature="e#4111#4112#0" expanded="true" />
+            <element signature="e#4177#4178#0" expanded="true" />
+            <element signature="e#4956#4957#0" expanded="true" />
+            <element signature="e#5037#5038#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/model/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="33" column="34" lean-forward="true" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/model/Route.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="183" column="26" lean-forward="true" selection-start-line="183" selection-start-column="26" selection-end-line="183" selection-end-column="26" />
+        <state relative-caret-position="359">
+          <caret line="50" column="91" selection-start-line="50" selection-start-column="91" selection-end-line="50" selection-end-column="91" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#Route#2;class#Route#0" />
             <element signature="method#Route#3;class#Route#0" />
+            <element signature="e#723#724#0" expanded="true" />
             <element signature="e#758#759#0" expanded="true" />
-            <element signature="e#786#787#0" expanded="true" />
-            <element signature="method#isComplete#0;class#Route#0" />
-            <element signature="method#isFeasible#0;class#Route#0" />
+            <element signature="e#794#795#0" expanded="true" />
+            <element signature="e#822#823#0" expanded="true" />
             <element signature="method#getPayloadCapacity#0;class#Route#0" />
             <element signature="method#isTankCapacityViolated#0;class#Route#0" />
             <element signature="method#areTimeWindowsViolated#0;class#Route#0" />
@@ -1138,6 +1171,44 @@
             <element signature="method#calculateRemainingTankCapacity#0;class#Route#0" />
             <element signature="method#getCustomers#0;class#Route#0" />
             <element signature="method#equals#0;class#Route#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/search/neighbourhood/TwoOptArcExchange.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#385#386#0" expanded="true" />
+            <element signature="e#416#417#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/Chromosome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/VehicleRoutingApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uaic/fii/solver/ga/search/TabuSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#324#325#0" expanded="true" />
+            <element signature="e#365#366#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -7,6 +7,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 public class Solution {
@@ -27,6 +28,12 @@ public class Solution {
         this.routes = routes;
     }
 
+    public Solution(EVRPTWInstance instance, Algorithm algorithm, List<Route> routes, Double cost, Double timeTaken) {
+        this(instance, algorithm, routes);
+        this.cost = cost;
+        this.timeTaken = timeTaken;
+    }
+
     public List<Route> getRoutes() {
         return routes;
     }
@@ -40,6 +47,11 @@ public class Solution {
     }
 
     public Double getCost() {
+        if (cost == null) {
+            this.cost = routes.stream()
+                    .mapToDouble(Route::getTotalDistance)
+                    .sum();
+        }
         return cost;
     }
 
@@ -133,5 +145,33 @@ public class Solution {
             return ((Depot) node).getName();
         }
         throw new IllegalArgumentException("Unkown node type");
+    }
+
+    public boolean isFeasible() {
+        return routes.stream().allMatch(Route::isFeasible);
+    }
+
+    public Solution deepClone() {
+        List<Route> clonedRoutes = routes.stream()
+                .map(Route::deepClone)
+                .collect(Collectors.toList());
+        return new Solution(instance, algorithm, clonedRoutes);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Solution solution = (Solution) o;
+        return Objects.equals(routes, solution.routes) &&
+                Objects.equals(instance, solution.instance) &&
+                algorithm == solution.algorithm &&
+                Objects.equals(cost, solution.cost) &&
+                Objects.equals(timeTaken, solution.timeTaken);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(routes, instance, algorithm, cost, timeTaken);
     }
 }

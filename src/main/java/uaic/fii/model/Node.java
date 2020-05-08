@@ -4,7 +4,6 @@ import java.util.Objects;
 
 public class Node {
     public int id;
-    private String name;
 
     Node() {}
 
@@ -19,6 +18,12 @@ public class Node {
         if (o == null || getClass() != o.getClass()) return false;
         Node node = (Node) o;
         return id == node.id;
+    }
+
+
+
+    public Node deepClone() {
+        return new Node(id);
     }
 
     @Override

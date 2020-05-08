@@ -6,6 +6,7 @@ import uaic.fii.model.Solution;
 import uaic.fii.solver.exact.EVRPTWModel;
 import uaic.fii.model.EVRPTWInstance;
 import uaic.fii.solver.ga.GeneticAlgorithm;
+import uaic.fii.solver.ga.search.TabuSearch;
 import uaic.fii.solver.verifier.RoutesLoader;
 import uaic.fii.solver.verifier.SchneiderLoader;
 
@@ -16,17 +17,20 @@ public class Main {
 
     public static void main(String[] args) {
         File instanceFile = new File("input/c101C5.txt");
-        File solutionFile = new File("C:\\Users\\BogdanBo\\Documents\\Facultate\\Dizertatie\\src\\main\\resources\\solution\\exact\\c101C5.txt");
+        // File solutionFile = new File("C:\\Users\\BogdanBo\\Documents\\Facultate\\Dizertatie\\src\\main\\resources\\solution\\exact\\c101C5.txt");
         EVRPTWInstance instance;
         try {
             instance = new SchneiderLoader().load(instanceFile);
+            GeneticAlgorithm geneticAlgorithm = new GeneticAlgorithm(instance);
+            geneticAlgorithm.run();
+            Solution solution = geneticAlgorithm.getSolution();
 
-            Solution solution = RoutesLoader.create(instance).load(solutionFile);
+            System.out.println(solution.getCost());
 
-            String test = "";
+            TabuSearch tabuSearch = new TabuSearch(instance);
+            Solution improved = tabuSearch.execute(solution);
 
-         /*   EVRPTWModel model = new EVRPTWModel(instance);
-            model.solve();*/
+            System.out.println(improved.getCost());
         //    model.solve();
 
         } catch(IOException e) {

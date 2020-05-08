@@ -1,4 +1,4 @@
-package uaic.fii.solver.ga;
+package uaic.fii.solver.ga.search.neighbourhood;
 
 import uaic.fii.model.EVRPTWInstance;
 import uaic.fii.model.Solution;
@@ -18,7 +18,7 @@ public abstract class AbstractNeighbourhoodGeneration {
         this.instance = instance;
     }
 
-    protected abstract Optional<Solution> generate(Solution solution);
+    public abstract List<Solution> generate(Solution solution);
 
     protected List<int []> combinations(List<Integer> list) {
         return list.stream()

@@ -1,9 +1,11 @@
 package uaic.fii.solver.ga;
 
+import uaic.fii.model.Solution;
 import uaic.fii.solver.greedy.BeasleyHeuristic;
 import uaic.fii.model.EVRPTWInstance;
 import uaic.fii.model.Node;
 import uaic.fii.model.Route;
+import uaic.fii.util.Algorithm;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +36,7 @@ public class GeneticAlgorithm {
     private List<Double> bestDistanceOfEachGeneration;
     private double areaUnderAverageDistances;
     private double areaUnderBestDistances;
+    private double timeTaken;
 
     public GeneticAlgorithm(EVRPTWInstance instance) {
         this.instance = instance;
@@ -158,6 +161,7 @@ public class GeneticAlgorithm {
     }
 
     public void run() {
+        long start = System.currentTimeMillis();
         for (int i = 0; i < maxGenerations; i++) {
             population = createNextGeneration();
             averageDistanceOfEachGeneration.add(population.getAverageDistance());
@@ -168,6 +172,7 @@ public class GeneticAlgorithm {
         finished = true;
         averageDistanceOfLastGeneration = population.getAverageDistance();
         bestDistanceOfLastGeneration = population.getFittest().getDistance();
+        timeTaken = System.currentTimeMillis() - start;
     }
 
     private Chromosome performLocalSearch(Chromosome chromosome) {
@@ -269,4 +274,14 @@ public class GeneticAlgorithm {
         }
     }
 
+    public Solution getSolution() {
+        if (!finished) {
+            throw new IllegalArgumentException("Genetic algorithm was never run.");
+        }
+        Chromosome fittest = population.getFittest();
+        List<Node> giantRoute = Stream.of(fittest.getArray()).collect(Collectors.toList());
+        BeasleyHeuristic heuristic = new BeasleyHeuristic(instance, giantRoute);
+        List<Route> routes = heuristic.solve();
+        return new Solution(instance, Algorithm.GA, routes, getBestDistanceOfLastGeneration(), timeTaken);
+    }
 }
