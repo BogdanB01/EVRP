@@ -50,16 +50,25 @@ public class TwoOptArcExchange extends AbstractNeighbourhoodGeneration {
         secondRoute.getNodes().clear();
         secondRoute.getNodes().addAll(newSecondRouteNodes);
 
-        if (newFirstRouteNodes.size() <= 2) {
+        if (newFirstRouteNodes.size() <= 2 || hasOnlyChargers(firstRoute)) {
             neighbour.getRoutes().remove(firstRouteIndex);
         }
 
-        if (newSecondRouteNodes.size() <= 2) {
+        if (newSecondRouteNodes.size() <= 2 || hasOnlyChargers(secondRoute)) {
             neighbour.getRoutes().remove(secondRouteIndex);
         }
         if (neighbour.isFeasible()) {
             return Optional.of(neighbour);
         }
         return Optional.empty();
+    }
+
+    private boolean hasOnlyChargers(Route route) {
+        for (int i = 1; i < route.getSize() - 1; i++) {
+            if ( ! instance.isRechargingStation(route.getNodes().get(i))) {
+                return false;
+            }
+        }
+        return true;
     }
 }
