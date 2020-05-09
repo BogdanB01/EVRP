@@ -21,9 +21,11 @@ public class GeneticAlgorithm {
     private int maxGenerations; // The number of generations to run
     private int k; // For tournament selection
     private double crossoverRate; // Odds of crossover occurring
+    private double mutationRate; // Odds of mutation occurring
     private double localSearchRate; // Odds of local search occurring
     private Random random;
     private CrossoverType crossoverType = CrossoverType.UNIFORM_ORDER;
+    private MutationType mutationType = MutationType.INSERTION;
 
     private boolean finished;
 
@@ -45,6 +47,7 @@ public class GeneticAlgorithm {
         maxGenerations = 100;
         k = 2;
         crossoverRate = 0.95;
+        mutationRate = 0.05;
         localSearchRate = 0;
         random = new Random();
         finished = false;
@@ -84,6 +87,13 @@ public class GeneticAlgorithm {
             throw new IllegalArgumentException("Parameter must be between 0 and 1 inclusive");
         }
         this.crossoverRate = crossoverRate;
+    }
+
+    public void setMutationRate(double mutationRate) {
+        if (mutationRate < 0 || mutationRate > 1) {
+            throw new IllegalArgumentException("Parameter must be between 0 and 1 inclusive");
+        }
+        this.mutationRate = mutationRate;
     }
 
     public void setLocalSearchRate(double localSearchRate) {
@@ -160,6 +170,10 @@ public class GeneticAlgorithm {
         this.crossoverType = crossoverType;
     }
 
+    public void setMutationType(MutationType mutationType) {
+        this.mutationType = mutationType;
+    }
+
     public void run() {
         long start = System.currentTimeMillis();
         for (int i = 0; i < maxGenerations; i++) {
@@ -187,6 +201,8 @@ public class GeneticAlgorithm {
             Chromosome c2 = Selection.tournamentSelection(population, k, random);
 
             boolean doCrossover = (random.nextDouble() <= crossoverRate);
+            boolean doMutate1 = (random.nextDouble() <= mutationRate);
+            boolean doMutate2 = (random.nextDouble() <= mutationRate);
             boolean doLocalSearch1 = (random.nextDouble() <= localSearchRate);
             boolean doLocalSearch2 = (random.nextDouble() <= localSearchRate);
 
@@ -195,6 +211,9 @@ public class GeneticAlgorithm {
                 c1 = children.get(0);
                 c2 = children.get(1);
             }
+
+            if (doMutate1) c1 = mutate(c1);
+            if (doMutate2) c2 = mutate(c2);
 
             if (doLocalSearch1) c1 = performLocalSearch(c1);
             if (doLocalSearch2) c2 = performLocalSearch(c2);
@@ -227,10 +246,33 @@ public class GeneticAlgorithm {
         return children;
     }
 
+    private Chromosome mutate(Chromosome chromosome) {
+        if (mutationType == MutationType.INSERTION) {
+            return Mutation.insertion(instance, chromosome, random);
+        } else if (mutationType == MutationType.RECIPROCAL_EXCHANGE) {
+            return Mutation.reciprocalExchange(instance, chromosome, random);
+        } else if (mutationType == MutationType.SCRAMBLE) {
+            return Mutation.scrambleMutation(instance, chromosome, random);
+        }
+        return Mutation.insertion(instance, chromosome, random);
+    }
+
+    private List<Route> getRoutesFromChromosome(Chromosome chromosome) {
+        List<Node> giantRoute = Stream.of(chromosome.getArray()).collect(Collectors.toList());
+        BeasleyHeuristic heuristic = new BeasleyHeuristic(instance, giantRoute);
+        return heuristic.solve();
+    }
+
     public enum CrossoverType {
         UNIFORM_ORDER,
         ONE_POINT,
         TWO_POINT
+    }
+
+    public enum MutationType {
+        INSERTION,
+        RECIPROCAL_EXCHANGE,
+        SCRAMBLE
     }
 
     public void printProperties () {
@@ -241,7 +283,9 @@ public class GeneticAlgorithm {
         System.out.println("k Value:            " + k);
         System.out.println("Local Search Rate:  " + localSearchRate);
         System.out.println("Crossover Type:     " + crossoverType);
-        System.out.println("Crossover Rate:     " + (crossoverRate*100) + "%");
+        System.out.println("Crossover Rate:     " + (crossoverRate * 100) + "%");
+        System.out.println("Mutation Type: " + mutationType);
+        System.out.println("Mutation Rate: " + (mutationRate * 100) + "%");
     }
 
     public void printResults () {
@@ -278,10 +322,7 @@ public class GeneticAlgorithm {
         if (!finished) {
             throw new IllegalArgumentException("Genetic algorithm was never run.");
         }
-        Chromosome fittest = population.getFittest();
-        List<Node> giantRoute = Stream.of(fittest.getArray()).collect(Collectors.toList());
-        BeasleyHeuristic heuristic = new BeasleyHeuristic(instance, giantRoute);
-        List<Route> routes = heuristic.solve();
+        List<Route> routes = getRoutesFromChromosome(population.getFittest());
         return new Solution(instance, Algorithm.GA, routes, getBestDistanceOfLastGeneration(), timeTaken);
     }
 }

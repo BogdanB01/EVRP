@@ -83,12 +83,12 @@ public class BeasleyHeuristic {
         }
 
         if (instance.getDepot().id != to.id &&
-                route.calculateRemainingTankCapacity(route.getEnd()) < instance.getVehicleEnergyCapacity() / 2) {
+               route.calculateRemainingTankCapacity(route.getEnd()) < instance.getVehicleEnergyCapacity() / 2) {
             insertStationBefore(route, to);
 
             if (!route.isFeasible()) {
-                route.removeNode(route.getEnd());
-                route.removeNode(route.getEnd());
+                route.pop();
+                route.pop();
                 route.addNode(to);
             }
         }

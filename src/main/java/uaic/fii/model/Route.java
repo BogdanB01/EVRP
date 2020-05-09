@@ -42,6 +42,7 @@ public class Route {
     public void pop() {
         nodes.remove(nodes.size() - 1);
     }
+
     public void addNode(Node node) {
         nodes.add(node);
     }

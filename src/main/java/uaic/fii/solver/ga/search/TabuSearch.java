@@ -6,9 +6,7 @@ import uaic.fii.solver.ga.search.neighbourhood.*;
 
 import java.util.*;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.CompletionStage;
 import java.util.concurrent.ExecutionException;
-import java.util.concurrent.Future;
 import java.util.stream.Collectors;
 
 public class TabuSearch {
@@ -43,7 +41,6 @@ public class TabuSearch {
         List<Solution> neighbours = getNeighbourhoods(solution);
         neighbours.removeIf(tabuMap::containsKey);
         if (neighbours.isEmpty()) {
-            System.out.println("No solutions available");
             return solution;
         }
         return neighbours.stream()
@@ -79,7 +76,7 @@ public class TabuSearch {
         }
 
         throw new RuntimeException("Error occurred exploring neighbours");
-        //List<Solution> neighbours = new ArrayList<>();
+       // List<Solution> neighbours = new ArrayList<>();
 
         /*CompletableFuture<List<Solution>> interRouteExchangeNeighbours = CompletableFuture
                 .supplyAsync(() -> new InterRouteExchange(instance).generate(solution));
@@ -99,14 +96,14 @@ public class TabuSearch {
                 .join();
 */
 
-        /*
-        neighbours.addAll(new InterRouteExchange(instance).generate(solution));
+
+       /* neighbours.addAll(new InterRouteExchange(instance).generate(solution));
         neighbours.addAll(new InterRouteRelocate(instance).generate(solution));
         neighbours.addAll(new StationInRe(instance).generate(solution));
         neighbours.addAll(new TwoOptArcExchange(instance).generate(solution));
         neighbours.addAll(new TwoOrOpt(instance).generate(solution));
-        neighbours.addAll(new MoveStation(instance).generate(solution));*/
-      //  return neighbours;
+        neighbours.addAll(new MoveStation(instance).generate(solution));
+        return neighbours; */
     }
 
     private void updateTabuMap(Solution solution, Map<Solution, Integer> tabuMap) {
