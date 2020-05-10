@@ -1,5 +1,6 @@
 package uaic.fii.solver.exact;
 
+import gurobi.GRB;
 import gurobi.GRBEnv;
 import gurobi.GRBException;
 import gurobi.GRBModel;
@@ -21,6 +22,7 @@ public abstract class GurobiModel {
     private void start() throws GRBException {
         env = new GRBEnv("mip.log");
         model = new GRBModel(env);
+        model.set(GRB.DoubleParam.TimeLimit, 7200); // maximum time is 2 hours
     }
 
     private void dispose() throws GRBException {
@@ -36,15 +38,15 @@ public abstract class GurobiModel {
 
     protected abstract Solution extractSolution() throws GRBException;
 
-    public void solve() throws GRBException, IOException {
+    public Solution solve() throws GRBException, IOException {
         start();
         createVariables();
         createObjective();
         createConstraints();
         model.optimize();
         Solution solution = extractSolution();
-        solution.saveToFile();
         dispose();
+        return solution;
     }
 
 }

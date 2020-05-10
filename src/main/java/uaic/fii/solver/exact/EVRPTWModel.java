@@ -337,6 +337,8 @@ public class EVRPTWModel extends GurobiModel {
             }
         }
 
-        return new Solution(instance, Algorithm.EXACT, routes);
+        double cost = model.get(GRB.DoubleAttr.ObjVal);
+        double timeTaken = model.get(GRB.DoubleAttr.Runtime);
+        return new Solution(instance, Algorithm.EXACT, routes, cost, timeTaken);
     }
 }

@@ -1,6 +1,7 @@
 package uaic.fii.solver.ga;
 
 import uaic.fii.model.Solution;
+import uaic.fii.solver.ga.search.TabuSearch;
 import uaic.fii.solver.greedy.BeasleyHeuristic;
 import uaic.fii.model.EVRPTWInstance;
 import uaic.fii.model.Node;
@@ -8,6 +9,7 @@ import uaic.fii.model.Route;
 import uaic.fii.util.Algorithm;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
@@ -48,7 +50,7 @@ public class GeneticAlgorithm {
         k = 2;
         crossoverRate = 0.95;
         mutationRate = 0.05;
-        localSearchRate = 0;
+        localSearchRate = 0.2;
         random = new Random();
         finished = false;
 
@@ -189,8 +191,22 @@ public class GeneticAlgorithm {
         timeTaken = System.currentTimeMillis() - start;
     }
 
-    private Chromosome performLocalSearch(Chromosome chromosome) {
-        return chromosome;
+
+
+    private Chromosome performTabuSearch(Chromosome chromosome) {
+        List<Route> routes = decodeChromosome(chromosome);
+        Solution solution = new Solution(instance, Algorithm.GA, routes);
+        Solution improved  = new TabuSearch(instance).execute(solution);
+        return extractChromosomeFromSolution(improved);
+    }
+
+    private Chromosome extractChromosomeFromSolution(Solution solution) {
+        Node[] customers = solution.getRoutes().stream()
+                .map(Route::getNodes)
+                .flatMap(Collection::stream)
+                .filter(instance::isCustomer)
+                .toArray(Node[]::new);
+        return new Chromosome(instance, customers);
     }
 
     private Population createNextGeneration() {
@@ -215,8 +231,8 @@ public class GeneticAlgorithm {
             if (doMutate1) c1 = mutate(c1);
             if (doMutate2) c2 = mutate(c2);
 
-            if (doLocalSearch1) c1 = performLocalSearch(c1);
-            if (doLocalSearch2) c2 = performLocalSearch(c2);
+            if (doLocalSearch1) c1 = performTabuSearch(c1);
+            if (doLocalSearch2) c2 = performTabuSearch(c2);
 
             nextGeneration.add(c1);
             nextGeneration.add(c2);
@@ -257,22 +273,10 @@ public class GeneticAlgorithm {
         return Mutation.insertion(instance, chromosome, random);
     }
 
-    private List<Route> getRoutesFromChromosome(Chromosome chromosome) {
+    private List<Route> decodeChromosome(Chromosome chromosome) {
         List<Node> giantRoute = Stream.of(chromosome.getArray()).collect(Collectors.toList());
         BeasleyHeuristic heuristic = new BeasleyHeuristic(instance, giantRoute);
         return heuristic.solve();
-    }
-
-    public enum CrossoverType {
-        UNIFORM_ORDER,
-        ONE_POINT,
-        TWO_POINT
-    }
-
-    public enum MutationType {
-        INSERTION,
-        RECIPROCAL_EXCHANGE,
-        SCRAMBLE
     }
 
     public void printProperties () {
@@ -307,22 +311,26 @@ public class GeneticAlgorithm {
                 getAreaUnderAverageDistances());
         System.out.println("Area Under Average Distance:           " +
                 getAreaUnderBestDistances());
-
-        Chromosome best = population.getFittest();
-
-        List<Node> giantRoute = Stream.of(best.getArray()).collect(Collectors.toList());
-        BeasleyHeuristic split = new BeasleyHeuristic(instance, giantRoute);
-        List<Route> routes = split.solve();
-        for (Route route : routes) {
-            System.out.println(route.getNodes() + " " + route.isFeasible());
-        }
     }
 
     public Solution getSolution() {
         if (!finished) {
             throw new IllegalArgumentException("Genetic algorithm was never run.");
         }
-        List<Route> routes = getRoutesFromChromosome(population.getFittest());
-        return new Solution(instance, Algorithm.GA, routes, getBestDistanceOfLastGeneration(), timeTaken);
+        List<Route> routes = decodeChromosome(population.getFittest());
+        Solution solution = new Solution(instance, Algorithm.GA, routes, getBestDistanceOfLastGeneration(), timeTaken);
+        return new TabuSearch(instance).execute(solution);
+    }
+
+    public enum CrossoverType {
+        UNIFORM_ORDER,
+        ONE_POINT,
+        TWO_POINT
+    }
+
+    public enum MutationType {
+        INSERTION,
+        RECIPROCAL_EXCHANGE,
+        SCRAMBLE
     }
 }

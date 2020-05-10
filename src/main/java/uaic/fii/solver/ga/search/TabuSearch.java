@@ -73,31 +73,11 @@ public class TabuSearch {
             return neighbours;
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
+            throw new RuntimeException("Error occurred exploring neighbours");
         }
 
-        throw new RuntimeException("Error occurred exploring neighbours");
-       // List<Solution> neighbours = new ArrayList<>();
-
-        /*CompletableFuture<List<Solution>> interRouteExchangeNeighbours = CompletableFuture
-                .supplyAsync(() -> new InterRouteExchange(instance).generate(solution));
-        CompletableFuture<List<Solution>> interRouteRelocateNeighbours = CompletableFuture
-                .supplyAsync(() -> new InterRouteRelocate(instance).generate(solution));
-        CompletableFuture<List<Solution>> stationInReNeighbours = CompletableFuture
-                .supplyAsync(() -> new StationInRe(instance).generate(solution));
-        CompletableFuture<List<Solution>> twoOptArcExchangeNeighbours = CompletableFuture
-                .supplyAsync(() -> new TwoOptArcExchange(instance).generate(solution));
-        CompletableFuture<List<Solution>> twoOrOptNeighbours = CompletableFuture
-                .supplyAsync(() -> new TwoOrOpt(instance).generate(solution));
-        CompletableFuture<List<Solution>> moveStation = CompletableFuture
-                .supplyAsync(() -> new MoveStation(instance).generate(solution));
-
-        CompletableFuture.allOf(interRouteExchangeNeighbours, interRouteRelocateNeighbours,
-                stationInReNeighbours, twoOptArcExchangeNeighbours, twoOrOptNeighbours, moveStation)
-                .join();
-*/
-
-
-       /* neighbours.addAll(new InterRouteExchange(instance).generate(solution));
+        /* List<Solution> neighbours = new ArrayList<>();
+        neighbours.addAll(new InterRouteExchange(instance).generate(solution));
         neighbours.addAll(new InterRouteRelocate(instance).generate(solution));
         neighbours.addAll(new StationInRe(instance).generate(solution));
         neighbours.addAll(new TwoOptArcExchange(instance).generate(solution));

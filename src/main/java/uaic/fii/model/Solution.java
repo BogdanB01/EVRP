@@ -119,10 +119,11 @@ public class Solution {
         file.createNewFile();
         try (FileWriter fileWriter = new FileWriter(file)) {
             // write cost
-            double cost =routes.stream()
-                    .mapToDouble(Route::getTotalDistance)
-                    .sum();
             fileWriter.write(String.valueOf(cost));
+            fileWriter.write(System.lineSeparator());
+
+            // write time taken
+            fileWriter.write(String.valueOf(timeTaken));
             fileWriter.write(System.lineSeparator());
 
             // write routes

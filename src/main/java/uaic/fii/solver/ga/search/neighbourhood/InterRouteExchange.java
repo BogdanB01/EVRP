@@ -28,7 +28,7 @@ public class InterRouteExchange extends AbstractNeighbourhoodGeneration {
                     }
                     for (int n = 1; n < secondRoute.getSize() - 1; n++) {
                         if (instance.isRechargingStation(secondRoute.getNodes().get(n))) {
-                            continue; // skip exachange for Recharging stations
+                            continue; // skip exchange for Recharging stations
                         }
                         if (n != m || route.getNodes().get(m).id != secondRoute.getNodes().get(n).id) {
                             Optional<Solution> neighbour = performNodeSwap(solution, i, m, j, n);

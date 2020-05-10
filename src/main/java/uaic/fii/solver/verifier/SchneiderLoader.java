@@ -18,31 +18,32 @@ public class SchneiderLoader {
     }
 
     public EVRPTWInstance load(File file) throws IOException {
-        BufferedReader in = new BufferedReader(new FileReader(file));
-        Data data = parseData(in);
+        try (BufferedReader in = new BufferedReader(new FileReader(file))) {
+            Data data = parseData(in);
 
-        List<Depot> depots = new ArrayList<>();
-        List<RechargingStation> rechargingStations = new ArrayList<>();
-        List<Customer> customers = new ArrayList<>();
+            List<Depot> depots = new ArrayList<>();
+            List<RechargingStation> rechargingStations = new ArrayList<>();
+            List<Customer> customers = new ArrayList<>();
 
-        for(Node node : data.nodes)
-            switch(node.type) {
-                case "d":
-                    depots.add(parseDepotNode(node));
-                    break;
-                case "f":
-                    rechargingStations.add(parseRechargeStationNode(node, data.properties.rechargeRate));
-                    break;
-                case "c":
-                    customers.add(parseCustomerNode(node));
-                    break;
-                default:
-                    System.out.println("unknown node type " + node.type + " - skipping entry");
-            }
+            for (Node node : data.nodes)
+                switch (node.type) {
+                    case "d":
+                        depots.add(parseDepotNode(node));
+                        break;
+                    case "f":
+                        rechargingStations.add(parseRechargeStationNode(node, data.properties.rechargeRate));
+                        break;
+                    case "c":
+                        customers.add(parseCustomerNode(node));
+                        break;
+                    default:
+                        System.out.println("unknown node type " + node.type + " - skipping entry");
+                }
 
-        EVRPTWInstance.BEVehicleType vType = new EVRPTWInstance.BEVehicleType(0, "BEV", data.properties.fuelCapacity,
-                data.properties.fuelConsumption, data.properties.loadCapacity, data.properties.avgVelocity, 0000);
-        return new EVRPTWInstance(file.getName(), depots.get(0), rechargingStations, customers, vType);
+            EVRPTWInstance.BEVehicleType vType = new EVRPTWInstance.BEVehicleType(0, "BEV", data.properties.fuelCapacity,
+                    data.properties.fuelConsumption, data.properties.loadCapacity, data.properties.avgVelocity, 0000);
+            return new EVRPTWInstance(file.getName(), depots.get(0), rechargingStations, customers, vType);
+        }
     }
 
     private static String nextLine(BufferedReader in, boolean skipEmpty) throws IOException {

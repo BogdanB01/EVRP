@@ -6,11 +6,12 @@ import uaic.fii.model.Route;
 import uaic.fii.model.Solution;
 import uaic.fii.solver.exact.EVRPTWModel;
 import uaic.fii.model.EVRPTWInstance;
+import uaic.fii.solver.exact.GurobiModel;
 import uaic.fii.solver.ga.GeneticAlgorithm;
 import uaic.fii.solver.ga.search.TabuSearch;
 import uaic.fii.solver.greedy.BeasleyHeuristic;
 import uaic.fii.solver.greedy.KNearestNeighborsMinEndTime;
-import uaic.fii.solver.verifier.RoutesLoader;
+import uaic.fii.solver.greedy.KNearestNeighborsMinReadyTime;
 import uaic.fii.solver.verifier.SchneiderLoader;
 import uaic.fii.util.Algorithm;
 
@@ -22,13 +23,45 @@ import java.util.List;
 
 public class Main {
 
+
+
+    private static boolean isSolved(File file) {
+        String base = "C:\\Users\\BogdanBo\\Documents\\Facultate\\Dizertatie\\src\\main\\resources\\solution\\exact";
+        File solution = new File(String.join(File.separator, base, file.getName()));
+        return solution.exists();
+    }
+
+    public static void runExactAlgorithm() {
+        File inputDirectory = new File("input");
+        File[] instances = inputDirectory.listFiles();
+        for (File file : instances) {
+            System.out.println(String.format("Executing %s instance", file.getName()));
+
+            if (isSolved(file)) {
+                System.out.println(String.format("Skipping %s instance because it was already solved!", file.getName()));
+                continue;
+            }
+
+            EVRPTWInstance instance;
+            try {
+                instance = new SchneiderLoader().load(file);
+                GurobiModel model = new EVRPTWModel(instance);
+                Solution solution = model.solve();
+                solution.saveToFile();
+            } catch (IOException | GRBException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
     public static void main(String[] args) {
-        File instanceFile = new File("input/c202C15.txt");
+        runExactAlgorithm();
+        //File instanceFile = new File("input/c101C5.txt");
         // File solutionFile = new File("C:\\Users\\BogdanBo\\Documents\\Facultate\\Dizertatie\\src\\main\\resources\\solution\\exact\\c101C5.txt");
-        EVRPTWInstance instance;
+       /* EVRPTWInstance instance;
         try {
             instance = new SchneiderLoader().load(instanceFile);
-            BeasleyHeuristic heuristic = new BeasleyHeuristic(instance, new KNearestNeighborsMinEndTime(instance));
+            BeasleyHeuristic heuristic = new BeasleyHeuristic(instance, new KNearestNeighborsMinReadyTime(instance));
 
             List<Route> routes = heuristic.solve();
             Solution solution = new Solution(instance, Algorithm.GREEDY, routes);
@@ -59,11 +92,7 @@ public class Main {
                     .map(Route::getNodes)
                     .flatMap(Collection::stream)
                     .filter(instance::isCustomer)
-                    .count();
-
-            System.out.println("Customers in instance " + instance.getNumCustomers());
-            System.out.println("Customers in improved " + count);
-
+                    .count();*/
 
             /* GeneticAlgorithm geneticAlgorithm = new GeneticAlgorithm(instance);
             geneticAlgorithm.run();
@@ -77,9 +106,9 @@ public class Main {
             System.out.println(improved.getCost());*/
         //    model.solve();
 
-        } catch(IOException e) {
+      /*  } catch(IOException e) {
             e.printStackTrace();
-        } /* catch (GRBException e) {
+        }*/ /* catch (GRBException e) {
             e.printStackTrace();
         }*/
 
