@@ -14,11 +14,16 @@ public class TabuSearch {
     private static final int TABU_ITERATIONS = 100;
     private EVRPTWInstance instance;
 
+    private static Map<Solution, Solution> CACHE = new HashMap<>();
+
     public TabuSearch(EVRPTWInstance instance) {
         this.instance = instance;
     }
 
     public Solution execute(Solution solution) {
+        // check if the problem was already solved
+        if (CACHE.containsKey(solution)) return CACHE.get(solution);
+
         Solution overallBestSolution = solution;
         Solution bestCandidate = overallBestSolution;
         Map<Solution, Integer> tabuMap = new HashMap<>();
@@ -34,6 +39,9 @@ public class TabuSearch {
             }
             iteration++;
         }
+
+        // update cache
+        CACHE.put(solution, overallBestSolution);
         return overallBestSolution;
     }
 
@@ -54,9 +62,10 @@ public class TabuSearch {
                 CompletableFuture.supplyAsync(() -> new InterRouteExchange(instance).generate(solution)),
                 CompletableFuture.supplyAsync(() -> new InterRouteRelocate(instance).generate(solution)),
                 CompletableFuture.supplyAsync(() -> new StationInRe(instance).generate(solution)),
-                CompletableFuture.supplyAsync(() -> new TwoOptArcExchange(instance).generate(solution)),
-                CompletableFuture.supplyAsync(() -> new TwoOrOpt(instance).generate(solution)),
-                CompletableFuture.supplyAsync(() -> new MoveStation(instance).generate(solution))
+                CompletableFuture.supplyAsync(() -> new TwoOptStar(instance).generate(solution)),
+                CompletableFuture.supplyAsync(() -> new TwoOpt(instance).generate(solution)),
+                CompletableFuture.supplyAsync(() -> new MoveStation(instance).generate(solution)),
+                CompletableFuture.supplyAsync(() -> new MergeRoutes(instance).generate(solution))
         );
 
         CompletableFuture<List<List<Solution>>> result = CompletableFuture.allOf(futures.toArray(new CompletableFuture[0]))

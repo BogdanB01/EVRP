@@ -115,7 +115,7 @@ public class Crossover {
 
         // Get the customers of the opposite parent if the child does not already contain them.
         for (int i = randomPoint; i < totalCustomers; i++) {
-            if (!customersInChild1.contains(parent2[i])) {
+            if ( ! customersInChild1.contains(parent2[i])) {
                 customersInChild1.add(parent2[i]);
                 child1[i] = parent2[i];
             }
@@ -125,9 +125,9 @@ public class Crossover {
             }
         }
 
-        // Find all the cities that are still missing from each child.
+        // Find all the customers that are still missing from each child.
         for (int i = 0; i < totalCustomers; i++) {
-            if (!customersInChild1.contains(parent2[i])) {
+            if ( ! customersInChild1.contains(parent2[i])) {
                 customersNotInChild1.add(parent2[i]);
             }
             if (!customersInChild2.contains(parent1[i])) {
@@ -152,7 +152,11 @@ public class Crossover {
             child1[emptySpotsC1.remove(0)] = node;
         }
         for (Node node: customersNotInChild2) {
+            if (emptySpotsC2.size() == 0) {
+                String test = "";
+            }
             child2[emptySpotsC2.remove(0)] = node;
+
         }
 
         Chromosome childOne = new Chromosome(instance, child1);

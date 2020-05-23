@@ -9,9 +9,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class TwoOptArcExchange extends AbstractNeighbourhoodGeneration {
+public class TwoOptStar extends AbstractNeighbourhoodGeneration {
 
-    public TwoOptArcExchange(EVRPTWInstance instance) {
+    public TwoOptStar(EVRPTWInstance instance) {
         super(instance);
     }
 

@@ -22,7 +22,7 @@ public abstract class GurobiModel {
     private void start() throws GRBException {
         env = new GRBEnv("mip.log");
         model = new GRBModel(env);
-        model.set(GRB.DoubleParam.TimeLimit, 7200); // maximum time is 2 hours
+        model.set(GRB.DoubleParam.TimeLimit, 7200); // maximum time is 1 hours
     }
 
     private void dispose() throws GRBException {

@@ -119,7 +119,7 @@ public class Solution {
         file.createNewFile();
         try (FileWriter fileWriter = new FileWriter(file)) {
             // write cost
-            fileWriter.write(String.valueOf(cost));
+            fileWriter.write(String.valueOf(getCost()));
             fileWriter.write(System.lineSeparator());
 
             // write time taken
@@ -134,6 +134,7 @@ public class Solution {
                 fileWriter.write(line);
                 fileWriter.write(System.lineSeparator());
             }
+            fileWriter.flush();
         }
     }
 
@@ -156,7 +157,7 @@ public class Solution {
         List<Route> clonedRoutes = routes.stream()
                 .map(Route::deepClone)
                 .collect(Collectors.toList());
-        return new Solution(instance, algorithm, clonedRoutes);
+        return new Solution(instance, algorithm, clonedRoutes, cost, timeTaken);
     }
 
     @Override

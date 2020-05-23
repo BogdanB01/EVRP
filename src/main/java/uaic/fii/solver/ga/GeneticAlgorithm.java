@@ -24,9 +24,9 @@ public class GeneticAlgorithm {
     private int k; // For tournament selection
     private double crossoverRate; // Odds of crossover occurring
     private double mutationRate; // Odds of mutation occurring
-    private double localSearchRate; // Odds of local search occurring
+    private double tabuSearchRate; // Odds of local search occurring
     private Random random;
-    private CrossoverType crossoverType = CrossoverType.UNIFORM_ORDER;
+    private CrossoverType crossoverType = CrossoverType.ONE_POINT;
     private MutationType mutationType = MutationType.INSERTION;
 
     private boolean finished;
@@ -44,13 +44,13 @@ public class GeneticAlgorithm {
 
     public GeneticAlgorithm(EVRPTWInstance instance) {
         this.instance = instance;
-        initialPopulation = Population.getRandomPopulation(instance, 30, new Random());
+        initialPopulation = Population.getRandomPopulation(instance, 50, new Random());
         population = initialPopulation.deepCopy();
         maxGenerations = 100;
         k = 2;
         crossoverRate = 0.95;
         mutationRate = 0.05;
-        localSearchRate = 0.2;
+        tabuSearchRate = 0.1;
         random = new Random();
         finished = false;
 
@@ -98,11 +98,11 @@ public class GeneticAlgorithm {
         this.mutationRate = mutationRate;
     }
 
-    public void setLocalSearchRate(double localSearchRate) {
-        if (localSearchRate < 0 || localSearchRate > 1) {
+    public void setTabuSearchRate(double tabuSearchRate) {
+        if (tabuSearchRate < 0 || tabuSearchRate > 1) {
             throw new IllegalArgumentException("Parameter must be between 1 and 0 inclusive");
         }
-        this.localSearchRate = localSearchRate;
+        this.tabuSearchRate = tabuSearchRate;
     }
 
     public void setRandom(Random random) {
@@ -219,8 +219,8 @@ public class GeneticAlgorithm {
             boolean doCrossover = (random.nextDouble() <= crossoverRate);
             boolean doMutate1 = (random.nextDouble() <= mutationRate);
             boolean doMutate2 = (random.nextDouble() <= mutationRate);
-            boolean doLocalSearch1 = (random.nextDouble() <= localSearchRate);
-            boolean doLocalSearch2 = (random.nextDouble() <= localSearchRate);
+            boolean doTabuSearch1 = (random.nextDouble() <= tabuSearchRate);
+            boolean doTabuSearch2 = (random.nextDouble() <= tabuSearchRate);
 
             if (doCrossover) {
                 List<Chromosome> children = crossover(c1, c2);
@@ -231,8 +231,8 @@ public class GeneticAlgorithm {
             if (doMutate1) c1 = mutate(c1);
             if (doMutate2) c2 = mutate(c2);
 
-            if (doLocalSearch1) c1 = performTabuSearch(c1);
-            if (doLocalSearch2) c2 = performTabuSearch(c2);
+            if (doTabuSearch1) c1 = performTabuSearch(c1);
+            if (doTabuSearch2) c2 = performTabuSearch(c2);
 
             nextGeneration.add(c1);
             nextGeneration.add(c2);
@@ -285,7 +285,7 @@ public class GeneticAlgorithm {
         System.out.println("Population Size:    " + population.size());
         System.out.println("Max. Generation:    " + maxGenerations);
         System.out.println("k Value:            " + k);
-        System.out.println("Local Search Rate:  " + localSearchRate);
+        System.out.println("Local Search Rate:  " + tabuSearchRate);
         System.out.println("Crossover Type:     " + crossoverType);
         System.out.println("Crossover Rate:     " + (crossoverRate * 100) + "%");
         System.out.println("Mutation Type: " + mutationType);
@@ -318,7 +318,7 @@ public class GeneticAlgorithm {
             throw new IllegalArgumentException("Genetic algorithm was never run.");
         }
         List<Route> routes = decodeChromosome(population.getFittest());
-        Solution solution = new Solution(instance, Algorithm.GA, routes, getBestDistanceOfLastGeneration(), timeTaken);
+        Solution solution = new Solution(instance, Algorithm.GA, routes, getBestDistanceOfLastGeneration(), timeTaken / 1000);
         return new TabuSearch(instance).execute(solution);
     }
 

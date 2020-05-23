@@ -1,7 +1,10 @@
 package uaic.fii.util;
 
 public enum Algorithm {
-    GREEDY("greedy"),
+    KNN_MIN_READY_TIME("greedy/knn_min_ready_time"),
+    KNN_MIN_DUE_TIME("greedy/knn_min_due_time"),
+    NN_MIN_READY_TIME("greedy/min_ready_time"),
+    NN_MIN_DUE_TIME("greedy/min_due_time"),
     EXACT("exact"),
     GA("ga");
 
@@ -14,6 +17,7 @@ public enum Algorithm {
         return saveLocation;
     }
 }
+
 
 enum Greedy {
 

@@ -10,9 +10,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
-public class TwoOrOpt extends AbstractNeighbourhoodGeneration {
+public class TwoOpt extends AbstractNeighbourhoodGeneration {
 
-    public TwoOrOpt(EVRPTWInstance instance) {
+    public TwoOpt(EVRPTWInstance instance) {
         super(instance);
     }
 

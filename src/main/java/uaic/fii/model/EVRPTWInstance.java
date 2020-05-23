@@ -59,7 +59,7 @@ public class EVRPTWInstance {
 
     public void addDummies() {
         List<RechargingStation> chargersWithDummies = new ArrayList<>();
-        int numberOfDummies = 4;//customers.size() + rechargingStations.size();
+        int numberOfDummies = 5; // + rechargingStations.size();
 
         int id = 1;
 

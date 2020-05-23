@@ -2,6 +2,7 @@ package uaic.fii.model;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Route {
 
@@ -224,9 +225,22 @@ public class Route {
     }
 
     public Route deepClone() {
-        List<Node> clonedNodes = nodes.stream()
-                .map(Node::deepClone).collect(Collectors.toList());
+        List<Node> clonedNodes = new ArrayList<>(nodes);
         return new Route(instance, clonedNodes);
+    }
+
+    public void appendRoute(Route route) {
+        List<Node> routeToAppend = route.getNodes();
+        Node depot = instance.getDepot();
+        if (routeToAppend.get(0).equals(depot)) {
+            routeToAppend.remove(0);
+        }
+        if (nodes.get(nodes.size() - 1).equals(depot)) {
+            nodes.remove(nodes.size() - 1);
+        }
+        nodes = Stream.of(nodes, routeToAppend)
+                .flatMap(List::stream)
+                .collect(Collectors.toList());
     }
 
     @Override
